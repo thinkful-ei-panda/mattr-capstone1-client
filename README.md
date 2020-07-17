@@ -1,3 +1,25 @@
+This project is by Matthew Rougely.
+
+User Stories:
+Upon logging in users should see the Home screen which displays cards which contain information 
+about the current state of any given election. The information on the home screen cards should
+include the title of poll, vote count and a button which allows voters to cast a vote.
+
+When the user clicks on any vote button on the home screen they will be asked to login on register
+if they are not currently logged in. At the "You are not logged in screen" they will be given choices.
+One link will go to a registration form and the other link will go to the login form screen.
+
+Upon logging in user will recieve feedback if login or registration is successful. After that they will
+be rerouted back to the vote screen. Users will select an option via radio or drop-down input fields.
+
+Upon submitting vote user should be given feedback of a successful completion and sent back to home screen
+to view the updated vote count. The vote button at this point should be changed to reflect the fact that 
+the user has already voted on that issue.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
