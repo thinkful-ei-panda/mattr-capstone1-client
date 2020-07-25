@@ -9,7 +9,8 @@ import Nav from './Nav'
 import Democrat from './joe-biden.jpg'
 import Republican from './donald-trump.jpeg'
 import NotLoggedInScreen from './NotLoggedInScreen';
-import UserRegistrationScreen from './UserRegistrationScreen';
+// import UserRegistrationScreen from './UserRegistrationScreen';
+import RegistrationForm from './RegistrationForm/RegistrationForm'
 import UserLoginScreen from './UserLoginScreen';
 import VoteConfirmationScreen from './VoteConfirmationScreen';
 import NotFoundPage from './NotFoundPage';
@@ -90,7 +91,7 @@ class App extends Component {
           <Route path='/ScoreCard' component={ScoreCard} />
           <Route path='/VoteScreen' component={VoteScreen} />
           <Route path='/NotLoggedInScreen' component={NotLoggedInScreen} />
-          <Route path='/UserRegistrationScreen' component={UserRegistrationScreen} />
+          <Route path='/RegistrationForm' component={RegistrationForm} />
           <Route path='/UserLoginScreen' component={UserLoginScreen} />
           <Route path='/VoteConfirmationScreen' component={VoteConfirmationScreen} />
           <Route component={NotFoundPage} />
