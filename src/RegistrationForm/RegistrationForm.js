@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './RegistrationForm.css'
+import './RegistrationForm.css';
 import ValidationError from './ValidationError';
-var validator = require("email-validator");
+const validator = require("email-validator");
 
 export default class Form extends Component {
     constructor(props) {

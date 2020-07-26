@@ -16,7 +16,7 @@ export default class Nav extends Component {
         <Link to='/UserLoginScreen'>
           Login
         </Link>
-        <Link to='/UserRegistrationScreen'>
+        <Link to='/RegistrationForm'>
           Register
         </Link>
         <Link to='/voteConfirmationScreen'>

@@ -1,4 +1,37 @@
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+a, h1 {
+  color: white
+}
+
+h2, p {
+  color: #000055;
+}
+
+a{
+  margin: 10px;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 25%;
+}
+
+div.Nav{
+  text-align: center;
+}
+
+div.scorecard-entry {
+  background-color: #ffffffea;
+}
+
+section {
+  background-color: teal;
 }

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import './App.css';
 import ScoreCard from './ScoreCard';
 import VoteScreen from './VoteScreen';
 import Header from './Header'
 import Nav from './Nav'
-import Democrat from './joe-biden.jpg'
-import Republican from './donald-trump.jpeg'
+import Home from './Home'
 import NotLoggedInScreen from './NotLoggedInScreen';
 // import UserRegistrationScreen from './UserRegistrationScreen';
 import RegistrationForm from './RegistrationForm/RegistrationForm'
@@ -45,37 +44,37 @@ class App extends Component {
 
  
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const baseUrl = 'http://localhost:8000/users/';
-    const params = [];
-    if (this.state.id) {
-      params.push(`search=${this.state.search}`);
-    }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   const baseUrl = 'http://localhost:8000/users/';
+  //   const params = [];
+  //   if (this.state.id) {
+  //     params.push(`search=${this.state.search}`);
+  //   }
     
-    const query = params.join('&');
-    const url = `${baseUrl}?${query}`;
+  //   const query = params.join('&');
+  //   const url = `${baseUrl}?${query}`;
 
-    fetch(url)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
-        return res.json();
-      })
-      .then(data => {
-        this.setState({
-          voteScreen: true,
-          error: null
-        });
-      })
-      .catch(err => {
-        this.setState({
-          error: 'Sorry, could not get books at this time.'
-        });
-      })
+  //   fetch(url)
+  //     .then(res => {
+  //       if (!res.ok) {
+  //         throw new Error(res.statusText);
+  //       }
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       this.setState({
+  //         voteScreen: true,
+  //         error: null
+  //       });
+  //     })
+  //     .catch(err => {
+  //       this.setState({
+  //         error: 'Sorry, could not get books at this time.'
+  //       });
+  //     })
 
-  }
+  // }
 
   render() {
     
@@ -83,19 +82,26 @@ class App extends Component {
     return (
       <main className="App">
         <Header />
-        <Nav />
-        <ScoreCard />
-         {/* <HomePage /> */}
-          {/* <Route path='/' component={HomePage} /> */}
-          <Switch>
-          <Route path='/ScoreCard' component={ScoreCard} />
-          <Route path='/VoteScreen' component={VoteScreen} />
-          <Route path='/NotLoggedInScreen' component={NotLoggedInScreen} />
-          <Route path='/RegistrationForm' component={RegistrationForm} />
-          <Route path='/UserLoginScreen' component={UserLoginScreen} />
-          <Route path='/VoteConfirmationScreen' component={VoteConfirmationScreen} />
-          <Route component={NotFoundPage} />
-          </Switch>
+        <Nav />        
+        <Switch>
+        <Route exact path="/"
+                render={() => {
+                    return (
+                      this.state.isUserAuthenticated ?
+                      <Redirect to="/home" /> :
+                      <Redirect to="/NotLoggedInScreen" /> 
+                    )
+                }}
+              />
+               <Route exact path="/home" component={Home} />
+        <Route path='/ScoreCard' component={ScoreCard} />
+        <Route path='/VoteScreen' component={VoteScreen} />
+        <Route path='/NotLoggedInScreen' component={NotLoggedInScreen} />
+        <Route path='/RegistrationForm' component={RegistrationForm} />
+        <Route path='/UserLoginScreen' component={UserLoginScreen} />
+        <Route path='/VoteConfirmationScreen' component={VoteConfirmationScreen} />
+        <Route component={NotFoundPage} />
+        </Switch>
        
       </main>
     );
