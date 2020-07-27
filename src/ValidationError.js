@@ -1,5 +1,5 @@
 import React from 'react';
-import './RegistrationForm.css';
+import './RegistrationForm/RegistrationForm.css';
 
 export default function ValidationError(props) {
   if(props.message) {

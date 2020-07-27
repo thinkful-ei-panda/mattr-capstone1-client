@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './RegistrationForm.css';
-import ValidationError from './ValidationError';
+import ValidationError from '../ValidationError';
 const validator = require("email-validator");
 
-export default class Form extends Component {
+
+export default class RegistrationForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -125,41 +126,46 @@ export default class Form extends Component {
     return (
          <div>
             <form className="registration" onSubmit={e => this.handleSubmit(e)}>
+
                 <h2>Register</h2>
+
                 <div className="registration__hint">* required field</div>  
+
                 <div className="form-group">
                 <label htmlFor="first-name">First Name *</label>
                 <input type="text" className="registration__control" name="first-name" id="first-name" onChange={e => this.updateFirstName(e.target.value)} defaultValue="first name" />
                 <ValidationError message={firstNameError}/>
                 {this.state.firstName.touched && <ValidationError message={this.validateFirstName} />}
                 </div>
+
                 <div className="form-group">
                 <label htmlFor="last-name">Last Name *</label>
                 <input type="text" className="registration__control" name="last-name" id="name" onChange={e => this.updateLastName(e.target.value)} defaultValue="last name" />
-                {this.state.firstName.touched && <ValidationError message={lastNameError} />}
+                {this.state.lastName.touched && <ValidationError message={lastNameError} />}
                 </div>
+
                 <div className="form-group">
                 <label htmlFor="email">E-mail *</label>
                 <input type="email" className="registration__control" name="email" id="email" onChange={e => this.updateEmail(e.target.value)} defaultValue="email address"/>
-                {this.state.firstName.touched && <ValidationError message={emailError} />}
+                {this.state.email.touched && <ValidationError message={emailError} />}
                 </div>
+
                 <div className="form-group">
                 <label htmlFor="dob">Date of Birth *</label>
                 <input type="date" className="registration__control" name="dob" id="dob" onChange={e => this.updateDOB(e.target.value)} />
-                {/* {this.state.firstName.touched && <ValidationError message={this.validateDOB} />} */}
        </div>
 
        <div className="form-group">
           <label htmlFor="password">Password *</label>
           <input type="password" className="registration__control" name="password" id="password" onChange = {e => this.updatePassword(e.target.value)} />
-          {this.state.firstName.touched && <ValidationError message={passwordError} />}
+          {this.state.password.touched && <ValidationError message={passwordError} />}
           <div className="registration__hint">6 to 72 characters, must include a number</div>
        </div>
 
        <div className="form-group">
          <label htmlFor="repeatPassword">Repeat Password *</label>
          <input type="password" className="registration__control" name="repeatPassword" id="repeatPassword" onChange = {e => this.updateRepeatPassword(e.target.value)} />
-         {this.state.firstName.touched && <ValidationError message={repeatPasswordError} />}
+         {this.state.repeatPassword.touched && <ValidationError message={repeatPasswordError} />}
        </div>
 
        <div className="registration__button__group">

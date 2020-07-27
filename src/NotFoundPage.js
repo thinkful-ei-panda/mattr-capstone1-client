@@ -7,7 +7,8 @@ export default class NotFoundPage extends Component {
     render() {
         return (
             <div>
-        <Link to='/'>Home</Link>
+                <h3>We don't know what you're looking for. Go <Link to='/'>Home</Link> </h3>
+        
         </div>
         )
     }

@@ -3,21 +3,19 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 
 import './App.css';
 import ScoreCard from './ScoreCard';
-import VoteScreen from './VoteScreen';
+import Vote from './Vote';
 import Header from './Header'
 import Nav from './Nav'
 import Home from './Home'
-import NotLoggedInScreen from './NotLoggedInScreen';
-// import UserRegistrationScreen from './UserRegistrationScreen';
+import NotLoggedIn from './NotLoggedIn';
 import RegistrationForm from './RegistrationForm/RegistrationForm'
-import UserLoginScreen from './UserLoginScreen';
-import VoteConfirmationScreen from './VoteConfirmationScreen';
+import Login from './Login/Login';
+import VoteConfirmation from './VoteConfirmation';
 import NotFoundPage from './NotFoundPage';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 
-class App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
@@ -89,17 +87,17 @@ class App extends Component {
                     return (
                       this.state.isUserAuthenticated ?
                       <Redirect to="/home" /> :
-                      <Redirect to="/NotLoggedInScreen" /> 
+                      <Redirect to="/NotLoggedIn" /> 
                     )
                 }}
               />
                <Route exact path="/home" component={Home} />
         <Route path='/ScoreCard' component={ScoreCard} />
-        <Route path='/VoteScreen' component={VoteScreen} />
-        <Route path='/NotLoggedInScreen' component={NotLoggedInScreen} />
+        <Route path='/Vote' component={Vote} />
+        <Route path='/NotLoggedIn' component={NotLoggedIn} />
         <Route path='/RegistrationForm' component={RegistrationForm} />
-        <Route path='/UserLoginScreen' component={UserLoginScreen} />
-        <Route path='/VoteConfirmationScreen' component={VoteConfirmationScreen} />
+        <Route path='/Login' component={Login} />
+        <Route path='/VoteConfirmation' component={VoteConfirmation} />
         <Route component={NotFoundPage} />
         </Switch>
        
@@ -108,4 +106,3 @@ class App extends Component {
   }
 }
 
-export default App;

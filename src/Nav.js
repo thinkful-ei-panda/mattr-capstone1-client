@@ -10,16 +10,16 @@ export default class Nav extends Component {
         <Link to='/ScoreCard'>
           Home
         </Link>
-        <Link to='/VoteScreen'>
+        <Link to='/Vote'>
           Vote
         </Link>
-        <Link to='/UserLoginScreen'>
+        <Link to='/Login'>
           Login
         </Link>
         <Link to='/RegistrationForm'>
           Register
         </Link>
-        <Link to='/voteConfirmationScreen'>
+        <Link to='/VoteConfirmation'>
         Confirmation
         </Link>
       </div>

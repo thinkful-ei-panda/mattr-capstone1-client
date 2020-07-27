@@ -4,11 +4,7 @@
   justify-content: center;
 }
 
-a, h1 {
-  color: white
-}
-
-h2, p {
+a, h1, h2, p {
   color: #000055;
 }
 
@@ -28,10 +24,30 @@ div.Nav{
   text-align: center;
 }
 
-div.scorecard-entry {
-  background-color: #ffffffea;
+section {
+  background-color: #960000;
 }
 
-section {
-  background-color: teal;
+main {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ffffffe0;
+  padding: 20px;
+ 
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    width: 80%;
+    /* background-color: lightgreen; */
+  }
+
+  img {
+    width: 50%;
+  }
+ 
+  .scorecard-entry {
+    display: flex;
+  }
 }
