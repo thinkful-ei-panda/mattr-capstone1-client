@@ -6,6 +6,15 @@
 
 a, h1, h2, p {
   color: #000055;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  color: red;
 }
 
 a{

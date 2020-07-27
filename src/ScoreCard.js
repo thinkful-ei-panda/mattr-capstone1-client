@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Democrat from './joe-biden.jpg'
 import Republican from './donald-trump.jpeg'
+import Timer from './Timer'
 
 export default class ScoreCard extends Component {
    
@@ -9,6 +10,7 @@ export default class ScoreCard extends Component {
     render() {
         return (
             <form>
+                <Timer />
             <h2>Presidential Election 2020</h2>
 
             <div class='scorecard-entry'>
@@ -26,7 +28,7 @@ export default class ScoreCard extends Component {
                 <p>Current Count: 13,342,234</p>
                 </div>
             </div>
-            {/* <button>Vote</button> */}
+            
             <Link to='/Vote'>Vote</Link>
         </form>
 
