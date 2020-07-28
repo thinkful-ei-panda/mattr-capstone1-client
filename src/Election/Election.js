@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Democrat from './joe-biden.jpg'
-import Republican from './donald-trump.jpeg'
-import Timer from './Timer'
+import Democrat from '../joe-biden.jpg'
+import Republican from '../donald-trump.jpeg'
+import Timer from '../Timer'
 
-export default class ScoreCard extends Component {
+export default class Election extends Component {
    
     
     render() {
         return (
             <form>
-                <Timer />
+                
             <h2>Presidential Election 2020</h2>
-
+            <Timer />
             <div class='scorecard-entry'>
                 <img src={Democrat} alt="Joe Biden" />
                 <div className="stats">

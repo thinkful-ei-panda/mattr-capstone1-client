@@ -7,7 +7,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div className='Nav'>
-        <Link to='/ScoreCard'>
+        <Link to='/Election'>
           Home
         </Link>
         <Link to='/Vote'>

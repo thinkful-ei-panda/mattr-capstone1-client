@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
-a, h1, h2, p {
+a, h1, h2, h4, p {
   color: #000055;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -38,11 +41,20 @@ section {
 }
 
 main {
-  width: 50%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   background-color: #ffffffe0;
-  padding: 20px;
+  padding: 0px;
+ 
+}
+
+div.scorecard-entry {
+margin-top: 10px;
+background-color: #960000;
+}
+
+div.momentum {
  
 }
 

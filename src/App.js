@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 import './App.css';
-import ScoreCard from './ScoreCard';
+import Election from './Election/Election';
 import Vote from './Vote';
 import Header from './Header'
 import Nav from './Nav'
@@ -92,7 +92,7 @@ export default class App extends Component {
                 }}
               />
                <Route exact path="/home" component={Home} />
-        <Route path='/ScoreCard' component={ScoreCard} />
+        <Route path='/Election' component={Election} />
         <Route path='/Vote' component={Vote} />
         <Route path='/NotLoggedIn' component={NotLoggedIn} />
         <Route path='/RegistrationForm' component={RegistrationForm} />
