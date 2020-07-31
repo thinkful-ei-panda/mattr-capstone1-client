@@ -1,6 +1,6 @@
 body {
   background-size: cover;
-  background-image: url("american-flag-small.jpg");
+  background-image: url("../Images/american-flag-small.jpg");
   background-repeat: no-repeat;
   margin-top: 0;
   margin-bottom: 0;
@@ -47,14 +47,14 @@ img {
 
 @media screen and (min-width: 800px) {
   body {
-  background-image: url("american-flag-tablet.jpg");
+  background-image: url("../Images/american-flag-tablet.jpg");
   background-repeat: no-repeat;
   }
 }
 
 @media screen and (min-width: 1200px) {
   body {
-  background-image: url("American\ Flag.jpg");
+  background-image: url("../Images/American\ Flag.jpg");
   background-repeat: no-repeat;
   }
 }

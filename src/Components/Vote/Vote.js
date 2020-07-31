@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Democrat from './joe-biden.jpg'
-import Republican from './donald-trump.jpeg'
+import Democrat from '../Images/joe-biden.jpg'
+import Republican from '../Images/donald-trump.jpeg'
 // import VoteConfirmation from './VoteConfirmation'
 
 
-export default class VoteScreen extends Component {
+export default class Vote extends Component {
   render() {
     return (
       <form>

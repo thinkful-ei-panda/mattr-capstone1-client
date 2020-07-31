@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
+import PrivateRoute from '../Utils/PrivateRoute'
 import './App.css';
-import Election from './Election/Election';
-import Vote from './Vote';
-import Header from './Header'
-import Nav from './Nav'
-import Home from './Home'
-import NotLoggedIn from './NotLoggedIn';
-import RegistrationForm from './RegistrationForm/RegistrationForm'
-import Login from './Login/Login';
-import VoteConfirmation from './VoteConfirmation';
-import NotFoundPage from './NotFoundPage';
+import Election from '../Election/Election';
+
+import Header from '../Header'
+import Nav from '../Nav'
+import Home from '../Home'
+import NotLoggedIn from '../NotLoggedIn';
+import RegistrationForm from '../RegistrationForm/RegistrationForm'
+import Login from '../Login/Login';
+import Vote from '../Vote/Vote'
+import VoteConfirmation from '../VoteConfirmation';
+import NotFoundPage from '../NotFoundPage';
 
 
 
@@ -91,13 +93,13 @@ export default class App extends Component {
                     )
                 }}
               />
-               <Route exact path="/home" component={Home} />
+               <Route exact path="/Home" component={Home} />
         <Route path='/Election' component={Election} />
-        <Route path='/Vote' component={Vote} />
+        <PrivateRoute path='/Vote' component={Vote} />
         <Route path='/NotLoggedIn' component={NotLoggedIn} />
         <Route path='/RegistrationForm' component={RegistrationForm} />
         <Route path='/Login' component={Login} />
-        <Route path='/VoteConfirmation' component={VoteConfirmation} />
+        <PrivateRoute path='/VoteConfirmation' component={VoteConfirmation} />
         <Route component={NotFoundPage} />
         </Switch>
        

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Democrat from '../joe-biden.jpg'
-import Republican from '../donald-trump.jpeg'
+import Democrat from '../Images/joe-biden.jpg'
+import Republican from '../Images/donald-trump.jpeg'
 import Timer from '../Timer'
 
 export default class Election extends Component {
