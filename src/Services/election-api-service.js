@@ -1,9 +1,10 @@
-import config from '../config'
 import TokenService from './token-service'
+import config from '../config'
 
-const VoteApiService = {
-  getVotes(id) {
-    return fetch(`${config.API_ENDPOINT}/vote/${id}`, {
+
+const ElectionApiService = {
+  getElections() {
+    return fetch(`${config.API_ENDPOINT}/election`, {
       headers: {
         'authorization' : `bearer ${TokenService.getAuthToken()}`
       }
@@ -15,7 +16,7 @@ const VoteApiService = {
       )
   },
   postVote(vote, id) {
-    return fetch(`${config.API_ENDPOINT}/vote/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/election`, {
       method: 'POST',
       headers: {
         'content-type':'application/json',
@@ -30,7 +31,7 @@ const VoteApiService = {
       )
   },
   updateSpirit(vote, id) {
-    return fetch(`${config.API_ENDPOINT}/vote/${id}`, {
+    return fetch(`${config.API_ENDPOINT}/election`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -46,4 +47,4 @@ const VoteApiService = {
   }
 }
 
-export default VoteApiService
+export default ElectionApiService

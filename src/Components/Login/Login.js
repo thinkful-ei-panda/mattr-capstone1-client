@@ -81,8 +81,6 @@ export default class Login extends Component {
             <div className="registration__hint">6 to 72 characters, must include a number</div>
         </div>
 
-       
-
         <div className="registration__button__group">
           <button type="reset" className="registration__button"> Reset </button>
           <button type="submit" className="registration__button" disabled={ this.validateEmail() || this.validatePassword() } > Login </button>

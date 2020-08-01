@@ -42,42 +42,34 @@ export default class App extends Component {
     }
   }
 
- 
+  handleSubmit(e) {
+    e.preventDefault();
+    const baseUrl = 'http://localhost:8000/user/';
+    // const params = [];  
+    // const query = params.join('&');
+    // const url = `${baseUrl}?${query}`;
+    const url = `${baseUrl}`;
+    fetch(url)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        return res.json();
+      })
+      .then(data => {
+        this.setState({
+          error: null
+        });
+      })
+      .catch(err => {
+        this.setState({
+          error: 'Sorry, could not complete operation.'
+        });
+      })
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const baseUrl = 'http://localhost:8000/users/';
-  //   const params = [];
-  //   if (this.state.id) {
-  //     params.push(`search=${this.state.search}`);
-  //   }
-    
-  //   const query = params.join('&');
-  //   const url = `${baseUrl}?${query}`;
-
-  //   fetch(url)
-  //     .then(res => {
-  //       if (!res.ok) {
-  //         throw new Error(res.statusText);
-  //       }
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       this.setState({
-  //         voteScreen: true,
-  //         error: null
-  //       });
-  //     })
-  //     .catch(err => {
-  //       this.setState({
-  //         error: 'Sorry, could not get books at this time.'
-  //       });
-  //     })
-
-  // }
+  }
 
   render() {
-    
     
     return (
       <main className="App">
