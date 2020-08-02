@@ -63,7 +63,7 @@ export default class Login extends Component {
 
     return (
         <div>
-            <form className="registration" onSubmit={e => this.handleLogin(e)}>
+            <form className="registration" action="/auth/login" onSubmit={e => this.handleLogin(e)}>
 
                 <h2>Login</h2>
                 
@@ -76,7 +76,7 @@ export default class Login extends Component {
 
         <div className="form-group">
             <label htmlFor="password">Password *</label>
-            <input type="password" className="registration__control" name="password" id="password" onChange = {e => this.updatePassword(e.target.value)} />
+            <input type="password" className="registration__control" name="pw" id="password" onChange = {e => this.updatePassword(e.target.value)} />
             {this.state.password.touched && <ValidationError message={passwordError} />}
             <div className="registration__hint">6 to 72 characters, must include a number</div>
         </div>

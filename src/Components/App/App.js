@@ -24,15 +24,7 @@ export default class App extends Component {
     this.state = {
       users: [
         {
-          id: '',
-          firstName: '',
-          lastName: '',
-          DOB: '',
-          email: '',
-          userName: '',
-          votePresident: '',
           loggedIn: false,
-
         }
       ],
       voteScreen: false,
@@ -44,7 +36,7 @@ export default class App extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const baseUrl = 'http://localhost:8000/user/';
+    const baseUrl = 'http://localhost:8000/user';
     // const params = [];  
     // const query = params.join('&');
     // const url = `${baseUrl}?${query}`;
