@@ -9,7 +9,6 @@ export default class Logout extends Component {
 
     handleLogout(event){
         event.preventDefault()
-        console.log(TokenService.getAuthToken())
         TokenService.clearAuthToken()
         return history.push('/Home')
 

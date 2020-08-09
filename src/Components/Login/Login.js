@@ -3,9 +3,6 @@ import history from '../../history'
 import TokenService from '../../Services/token-service'
 import AuthApiService from '../../Services/auth-api-service'
 import '../RegistrationForm/RegistrationForm.css';
-
-import LoginContext from '../../context/LoginContext'
-
 import ValidationError from '../ValidationError';
 import validator from 'email-validator'
 import Nav from '../Nav';
@@ -86,7 +83,6 @@ export default class Login extends Component {
                 <div className="form-group">
                     <label htmlFor="user_password">Password *</label>
                     <input type="password" className="registration__control" name="password" id="user_password" onChange = {e => this.updatePassword(e.target.value)} />
-                    {/* {this.state.user_password.touched && <ValidationError message={passwordError} />} */}
                 </div>
 
                 <div className="vote-link-button-group">

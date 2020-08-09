@@ -5,7 +5,7 @@ import Nav from './Nav'
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div className='landing-page'>
                  <Nav />  
                 <p> Welcome to My Poll Data! You are now entering the beta site.
                     Let us begin our journey into shaping the future of Democracy.
@@ -23,7 +23,6 @@ export default class Home extends Component {
                 <p> password: My7$ecret </p>
 
                 <Link to='/Login' className='vote-link'> Login </Link>
-
 
             </div>
         )

@@ -5,9 +5,6 @@ import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
 import { Button } from '../Utils/Utils'
 import Nav from '../Nav'
-
-
-
 export default class Vote extends Component {
 
   state = { 
@@ -20,7 +17,6 @@ export default class Vote extends Component {
      }
 
      static getDerivedStateFromError(error) {
-      console.error(error)
       return { hasError: true }
     }
 
@@ -32,11 +28,6 @@ export default class Vote extends Component {
     event.preventDefault();
     const  election_id  = this.state.election_id;
     const  candidate_id  = this.state.candidate_id.value
-
-    console.log(`
-    election_id: ${election_id}
-    candidate_id: ${candidate_id}
-    `)
     
     ElectionApiService.postVote({
       election_id: election_id, 

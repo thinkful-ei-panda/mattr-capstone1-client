@@ -94,7 +94,6 @@ export default class RegistrationForm extends Component {
         if (repeatPassword !== password) {
           return 'Passwords do not match';
         }
-
         return false
       }
 

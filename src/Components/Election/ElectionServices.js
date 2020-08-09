@@ -12,7 +12,6 @@ const ElectionServices = {
   getCandidate1Data(){
     return fetch(`${config.API_ENDPOINT}/candidate/1`)
     .then(res => {
-      console.log(res)
      return res.json()
     })
    
@@ -24,7 +23,6 @@ const ElectionServices = {
      return res.json()
     })
     .then(res => {
-      console.log(res)
       this.setState({candidate2: res})
     })
   },
@@ -35,7 +33,6 @@ const ElectionServices = {
      return res.json()
     })
     .then(res => {
-      console.log(res)
       this.setState({votes: res})
     })
   }

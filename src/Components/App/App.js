@@ -23,21 +23,11 @@ export default class App extends Component {
     }
   }
 
-  // state = { 
-  //   hasError: false
-  //   }
-
-  // static getDerivedStateFromError(error) {
-  //   console.error(error)
-  //   return { hasError: true }
-  // }
-
   render() {
     
     return (
       <main className="App">
         <Header />
-        {/* <Nav />         */}
         <Switch>
           
         <Route exact path="/"
@@ -51,13 +41,11 @@ export default class App extends Component {
               />
         <Route exact path="/Home" component={Home} />
         <Route exact path="/Election" component={Election}/>
-        
         <PrivateRoute path='/Vote' component={Vote} />
         <Route path='/NotLoggedIn' component={NotLoggedIn} />
         <Route path='/RegistrationForm' component={RegistrationForm} />
         <Route path='/Login' component={Login} />
         <Route path='/Logout' component={Logout} />
-        
         <PrivateRoute path='/VoteConfirmation' component={VoteConfirmation} />
         <Route component={NotFoundPage} />
         </Switch>

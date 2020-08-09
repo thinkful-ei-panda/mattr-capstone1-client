@@ -24,7 +24,6 @@ export default class Election extends Component {
      return res.json()
     })
     .then(res => {
-      console.log(res)
       this.setState({candidate1: res})
     })
   }
@@ -35,7 +34,6 @@ export default class Election extends Component {
      return res.json()
     })
     .then(res => {
-      console.log(res)
       this.setState({candidate2: res})
     })
   }
@@ -46,7 +44,6 @@ export default class Election extends Component {
      return res.json()
     })
     .then(res => {
-      console.log(res)
       this.setState({votes: res})
     })
   }
