@@ -1,8 +1,6 @@
 export default {
-    API_ENDPOINT: "http://localhost:8000",
-    TOKEN_KEY: "Linus-Token-Key",
-    ID_KEY: "user_id",
-  };
-  
-  // 'http://localhost:8080 https://blooming-reef-26525.herokuapp.com'
-  
+API_ENDPOINT: 'http://localhost:8000/api',
+TOKEN_KEY: 'poll-data-client-auth-token',
+API_KEY: process.env.REACT_APP_API_KEY,
+ID_KEY: 'user_id'
+}

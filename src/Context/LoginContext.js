@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TokenService from "../Services/token-service";
 
 export const LoginContext = React.createContext({
-  nickname: "",
+  email: "",
   loggedIn: false,
   error: null,
   registered: false,
@@ -41,7 +41,7 @@ export class LoginProvider extends Component {
       error: this.state.error,
       handleLoginState: this.handleLoginState,
       handleRegisteredState: this.handleRegisteredState,
-      saveNickname: this.saveNickname,
+      saveEmail: this.saveEmail,
     };
     return (
       <LoginContext.Provider value={value}>

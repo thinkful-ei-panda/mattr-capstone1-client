@@ -1,52 +1,81 @@
 import React, { Component } from 'react'
-import ElectionContext from '../../Context/ElectionContext'
 import ElectionApiService from '../../Services/election-api-service'
-// import { Link } from 'react-router-dom'
+import history from '../../history'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
 import { Button } from '../Utils/Utils'
-// import VoteConfirmation from './VoteConfirmation'
+import Nav from '../Nav'
+
 
 
 export default class Vote extends Component {
-  static contextType = ElectionContext
-  handleSubmit = event => {
-    event.preventDefault()
-    const { election } = this.context
-    const { candidate } = event.target
-    ElectionApiService.postVote(election.id, candidate.value)
-    .then(this.context.addVote)
-    .then(() => {
-      Text.value = ''
+
+  state = { 
+    hasError: false,
+    election_id: 1,
+    candidate_id: {
+        value: 0, 
+        touched: true
+    }
+     }
+
+     static getDerivedStateFromError(error) {
+      console.error(error)
+      return { hasError: true }
+    }
+
+    updateCandidateChoice(candidate_id) {
+      this.setState({candidate_id: {value: candidate_id, touched: true}})
+  };
+
+  handleVote = event => {
+    event.preventDefault();
+    const  election_id  = this.state.election_id;
+    const  candidate_id  = this.state.candidate_id.value
+
+    console.log(`
+    election_id: ${election_id}
+    candidate_id: ${candidate_id}
+    `)
+    
+    ElectionApiService.postVote({
+      election_id: election_id, 
+      candidate_id: candidate_id,
+    })
+    .then(res => {
+      candidate_id.value = ''
     })
     .catch(this.context.setError)
+    history.push('/VoteConfirmation')
   }
   render() {
     return (
-      <form className='VoteForm' onSubmit={this.handleSubmit}>
+    <div>
+      <Nav/>
+        <form className='VoteForm'  onSubmit={this.handleVote} >
          
-            <h2>Presidential Election 2020</h2>
+            <h2> Presidential Election 2020 </h2>
 
-                <div class='scorecard-entry'>
+                <div className='scorecard-entry'>
                   <img src={Democrat} alt="Joe Biden" />
                   <div className="stats">              
-                  <input type="radio" value="1" name="presidential-election-2020" id="joe-biden-vote" />
-                  <label for="joe-biden-vote">Joe Biden</label>
+                  <input type="radio" value="1" name="presidential-election-2020" id="candidate_id" onChange={e => this.updateCandidateChoice(e.target.value)} />
+                  <label htmlFor="joe-biden-vote"> Joe Biden </label>
                   </div>
                 </div>
             
-                <div class='scorecard-entry'>
+                <div className='scorecard-entry'>
                   <img src={Republican} alt="Donald Trump" />
                   <div className="stats"> 
-                  <input type="radio" value="2" name="presidential-election-2020" id="donald-trump-vote" />
-                  <label for="donald-trump-vote">Donald Trump</label>
+                  <input type="radio" value="2" name="presidential-election-2020" id="candidate_id" onChange={e => this.updateCandidateChoice(e.target.value)} />
+                  <label htmlFor="donald-trump-vote">Donald Trump</label>
                   </div>
                 </div>
 
-            {/* <Link to='/VoteConfirmation'> Submit </Link> */}
-            <Button type='submit'> Cast Vote </Button>
+            <Button type='submit' className='vote-link' > Cast Vote </Button>
         
         </form>
+    </div>
     )
   }
 }

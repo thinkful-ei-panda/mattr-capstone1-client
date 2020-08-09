@@ -1,8 +1,8 @@
 import TokenService from './token-service'
 import config from '../config'
 
-
 const ElectionApiService = {
+  
   getElections() {
     return fetch(`${config.API_ENDPOINT}/election`, {
       headers: {
@@ -15,8 +15,9 @@ const ElectionApiService = {
           : res.json()
       )
   },
-  postVote(vote, id) {
-    return fetch(`${config.API_ENDPOINT}/election`, {
+
+  postVote(vote) {
+    return fetch(`${config.API_ENDPOINT}/vote`, {
       method: 'POST',
       headers: {
         'content-type':'application/json',
@@ -30,8 +31,9 @@ const ElectionApiService = {
           : res.json()
       )
   },
-  updateSpirit(vote, id) {
-    return fetch(`${config.API_ENDPOINT}/election`, {
+
+  updateVote(vote, id ) {
+    return fetch(`${config.API_ENDPOINT}/vote/${id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -48,3 +50,4 @@ const ElectionApiService = {
 }
 
 export default ElectionApiService
+

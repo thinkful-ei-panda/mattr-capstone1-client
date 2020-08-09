@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
-import * as serviceWorker from './serviceWorker'
-import { ElectionListProvider } from './Context/ElectionListContext'
-import { ElectionProvider } from './Context/ElectionContext'
-import { LoginProvider } from './Context/LoginContext'
-import './index.css';
+import { Router } from "react-router-dom";
+import history from './history'
 import App from './Components/App/App';
-
+import { LoginProvider } from './context/LoginContext';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <LoginProvider>
-      <App />
-    </LoginProvider>
-  </BrowserRouter>,
+  <Router history={history}>
+      <LoginProvider>
+        <App />
+      </LoginProvider>
+  </Router>,
   document.getElementById('root')
 );
 

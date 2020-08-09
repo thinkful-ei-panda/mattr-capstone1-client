@@ -1,77 +1,106 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
-import Timer from './Timer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-const moment = require('moment')
+import ElectionHeader from './ElectionHeader'
+import Nav from '../Nav'
 
 export default class Election extends Component {
-  // state = { election:[] }
 
   constructor(props) {
     super(props);
     this.state = {
-      election: []
+      election1: [],
+      candidate1: [],
+      candidate2: [],
+      votes: [],
     }
   }
-
-  componentDidMount(){
-    fetch("http://localhost:8000/api/election/1")
+ 
+  getCandidate1Data(){
+    fetch(`${config.API_ENDPOINT}/candidate/1`)
     .then(res => {
      return res.json()
     })
     .then(res => {
       console.log(res)
-      this.setState({election: res})
+      this.setState({candidate1: res})
     })
   }
-   
+
+  getCandidate2Data(){
+    fetch(`${config.API_ENDPOINT}/candidate/2`)
+    .then(res => {
+     return res.json()
+    })
+    .then(res => {
+      console.log(res)
+      this.setState({candidate2: res})
+    })
+  }
+
+  getAllVoteData(){
+    fetch(`${config.API_ENDPOINT}/vote`)
+    .then(res => {
+     return res.json()
+    })
+    .then(res => {
+      console.log(res)
+      this.setState({votes: res})
+    })
+  }
+
+  componentDidMount(){
+    this.getCandidate1Data()
+    this.getCandidate2Data()
+    this.getAllVoteData()
+  }
+
     render() {
-        const { election } = this.props
+     function countTotalVotes(arr){
+            return arr.length
+          }
+        
+      function countVotes(arr, num){
+        let results = 0;
+        for(let i in arr){
+          if(arr[i].candidate_id === num){
+            results += 1
+          } 
+        }
+        return results
+      }
 
+
+      const totalVotes = countTotalVotes(this.state.votes)
+      const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
+      const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
         return (
+            <section className='election-card'>
+              <Nav />  
+              <ElectionHeader />
+        <h3>Total Votes: {totalVotes}</h3>
 
+              <div className='scorecard-entry'>
+                  <img src={Democrat} alt="Joe Biden" />
+                  <div className="stats">
+                  <h4 className='light'>{this.state.candidate1.candidate_name}</h4>
+                  <p className='light'>Votes: {bidenVotes} </p>
+                  </div>
+              </div>
 
-
-            <form>
-            <h1> Election Day Deadline: { moment(this.state.election.date_end).fromNow() } </h1>
-            <h2>{ this.state.election.date_created}</h2>
-            <div className='scorecard-entry'>
-                <img src={Democrat} alt="Joe Biden" />
-                <div className="stats">
-                {/* <h3>{ election.candidate_name }</h3>
-                <p>{this.state.election.vote_count}</p> */}
-                </div>
-            </div>
-
-            <div className='scorecard-entry'>
-                <img src={Republican} alt="Donald Trump" />
-                <div className="stats">
-                {/* <h3>{ this.state.election.candidate_name }</h3>
-                <p>{ this.state.election.vote_count}</p> */}
-                </div>
-            </div>
-            
-            <Link to='/Vote'>Vote</Link>
-        </form>
-
-
+              <div className='scorecard-entry'>
+                  <img src={Republican} alt="Donald Trump" />
+                  <div className="stats">
+                  <h4 className='light' >{this.state.candidate2.candidate_name}</h4>
+                  <p className='light'>Votes: {trumpVotes} </p>
+                  </div>
+              </div>
+              
+              <Link to='/Vote' className='vote-link'>Vote</Link>
+          </section>
         )
     }
-}
-
-
-function ElectionVoteCount({ election }) {
-    return (
-      <span
-        className='Election_ListItem__comment-count fa fa-ticket'
-      >
-        <FontAwesomeIcon size='lg' icon='ticket' />
-        <span
-          className='fa fa-ticket'>
-          {election.number_of_comments}
-        </span>
-      </span>
-    )
   }
+

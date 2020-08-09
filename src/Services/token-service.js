@@ -29,8 +29,8 @@ const TokenService = {
     return !!TokenService.getAuthToken()
   },
 
-  makeBasicAuthToken(userName, password) {
-    return window.btoa(`${userName}:${password}`)
+  makeBasicAuthToken(user_email, password) {
+    return window.btoa(`${user_email}:${password}`)
   },
 }
 

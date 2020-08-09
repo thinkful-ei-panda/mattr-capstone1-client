@@ -8,8 +8,9 @@
 a, h1, h2, h4, p {
   color: #000055;
   text-align: center;
-  margin-top: 0;
+  margin-top: 15px;
   margin-bottom: 0;
+  font-family: 'Kanit', sans-serif;
 }
 
 h3 {
@@ -18,18 +19,21 @@ h3 {
 
 h4 {
   color: red;
+  font-size: 1.3rem;
 }
 
-a{
+ a{
   margin: 10px;
   text-align: center;
   align-self: center;
   text-decoration: none;
   margin-bottom: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: .7em;
 }
 
 img {
-  width: 25%;
+  width: 50%;
 }
 
 div.Nav{
@@ -40,7 +44,7 @@ section {
   background-color: #960000;
 }
 
-main {
+main, .election-card {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -52,11 +56,61 @@ main {
 div.scorecard-entry {
 margin-top: 10px;
 background-color: #960000;
+display: flex;
 }
 
-div.momentum {
- 
+div.Content {
+ display: flex;
+ flex-direction: column;
+
 }
+
+.light{
+  color: #ffffffe0;
+}
+
+div.stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+}
+
+.vote-link {
+display: flex;
+align-content: center;
+justify-content: center;
+margin: 20px;
+font-size: 1.5rem;
+font-family: 'Kanit', sans-serif;
+}
+
+.vote-link:hover {
+  background-color: #000055;
+  color: #ffffffe0;
+}
+
+.vote-link-button-group {
+  display: flex;
+}
+
+form {
+  background-color: #960000;
+  color: #ffffffe0;
+}
+
+input[type=radio] {
+  font-size: 1.2em;
+  height: 1em;
+  width: 1em;
+}
+
+
 
 @media screen and (min-width: 480px) {
   main {
@@ -65,10 +119,23 @@ div.momentum {
   }
 
   img {
-    width: 50%;
+    width: 30%;
   }
  
   .scorecard-entry {
     display: flex;
+  }
+
+  a{
+    
+    font-size: 1.3em;
+  }
+
+  h4.light {
+    font-size: 3em;
+  }
+
+  p.light {
+    font-size: 2.2em;
   }
 }
