@@ -1,6 +1,6 @@
 {
   "name": "mattr-react-app-template",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -20,7 +20,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "CI=true react-scripts test --colors",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
