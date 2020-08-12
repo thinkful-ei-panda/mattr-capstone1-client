@@ -10,6 +10,6 @@ export default {
     API_TOKEN: process.env.REACT_APP_API_KEY,
     TOKEN_KEY: 'poll-data-client-auth-token',
     ID_KEY: 'user_id',
-    JWT_SECRET: '106816c9-bcb5-4a05-9d51-4dda16a357c3',
+    JWT_SECRET: process.env.REACT_APP_JWT_SECRET,
     }
     
