@@ -44,7 +44,7 @@ export default class RegistrationForm extends Component {
       .catch(res => {
         this.setState({ error: res.error})
       })
-      history.push('/Election')
+      history.push('/Login')
     }
 
     static defaultProps = {
