@@ -4,10 +4,7 @@ import TokenService from "../Services/token-service";
 import history from '../history'
 
 export default class Nav extends Component {
-  // handleLogout() {
-  //   TokenService.clearAuthToken();
-  // }
-
+  
   handleLogout(event){
     // event.preventDefault()
     TokenService.clearAuthToken()

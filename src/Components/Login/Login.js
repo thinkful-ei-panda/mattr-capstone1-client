@@ -64,8 +64,6 @@ export default class Login extends Component {
              history.push('/Election')
          }
 
-        
-
     render() {
     const emailError = this.validateEmail();
 
