@@ -43,7 +43,7 @@ export default class Login extends Component {
       }
 
       handleSubmitJwtAuth = ev => {
-           ev.preventDefault()
+          //  ev.preventDefault()
 
            this.setState({ error: null })
            const { user_email, user_password } = ev.target
@@ -63,6 +63,8 @@ export default class Login extends Component {
              })
              history.push('/Election')
          }
+
+        
 
     render() {
     const emailError = this.validateEmail();

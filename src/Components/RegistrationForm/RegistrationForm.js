@@ -84,7 +84,6 @@ export default class RegistrationForm extends Component {
           return false
         }
 
-        
       }
 
       validateRepeatPassword() {
