@@ -57,8 +57,10 @@ export default class Login extends Component {
                user_password.value = ''
                TokenService.saveAuthToken(res.authToken)
                this.props.onLoginSuccess()
+               
              })
              .catch(res => {
+              //  console.log(res.error)
                this.setState({ error: res.error })
              })
              history.push('/Election')
@@ -66,23 +68,26 @@ export default class Login extends Component {
 
     render() {
     const emailError = this.validateEmail();
-
+    const { error } = this.state
     return (
         <div>
            <Nav />  
             <form className="registration"  onSubmit={this.handleSubmitJwtAuth} >
+            <div role='alert'>
+            {error && <p className='red'>{error}</p>}
+            </div>
            
                 <h2>Login</h2>
                 
                 <div className="form-group">
                 <label htmlFor="user_email">E-mail *</label>
-                <input type="email" className="registration__control" name="email" id="user_email" onChange={e => this.updateEmail(e.target.value)} />
+                <input required type="email" className="registration__control" name="email" id="user_email" onChange={e => this.updateEmail(e.target.value)} />
                 {this.state.user_email.touched && <ValidationError message={emailError} />}
                 </div>
                 
                 <div className="form-group">
                     <label htmlFor="user_password">Password *</label>
-                    <input type="password" className="registration__control" name="password" id="user_password" onChange = {e => this.updatePassword(e.target.value)} />
+                    <input required type="password" className="registration__control" name="password" id="user_password" onChange = {e => this.updatePassword(e.target.value)} />
                 </div>
 
                 <div className="vote-link-button-group">
