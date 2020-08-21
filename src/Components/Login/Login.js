@@ -57,18 +57,20 @@ export default class Login extends Component {
                user_password.value = ''
                TokenService.saveAuthToken(res.authToken)
                this.props.onLoginSuccess()
-               
              })
              .catch(res => {
-              //  console.log(res.error)
+               console.log(res.error)
                this.setState({ error: res.error })
              })
-             history.push('/Election')
-         }
+
+            history.push('/Election') 
+         };
 
     render() {
+      
     const emailError = this.validateEmail();
     const { error } = this.state
+    
     return (
         <div>
            <Nav />  
