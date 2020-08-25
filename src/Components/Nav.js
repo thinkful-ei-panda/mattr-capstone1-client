@@ -16,7 +16,7 @@ export default class Nav extends Component {
         <Link to="/Home">Home</Link>
         <Link to="/Election">Elections</Link>
         {TokenService.hasAuthToken() ? (
-          <button className="logout-button" onClick={this.handleLogout}>Logout</button>
+          <Link className="logout-button" onClick={this.handleLogout}>Logout</Link>
         ) : (
           [
             <Link to="/RegistrationForm" key={90}>
