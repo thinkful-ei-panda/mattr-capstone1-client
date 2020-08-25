@@ -43,7 +43,7 @@ export default class Login extends Component {
       }
 
       handleSubmitJwtAuth = ev => {
-          //  ev.preventDefault()
+           ev.preventDefault()
 
            this.setState({ error: null })
            const { user_email, user_password } = ev.target
@@ -57,13 +57,14 @@ export default class Login extends Component {
                user_password.value = ''
                TokenService.saveAuthToken(res.authToken)
                this.props.onLoginSuccess()
+               history.push('/Election') 
              })
              .catch(res => {
-               console.log(res.error)
+               console.error(res.error)
                this.setState({ error: res.error })
              })
-
-            history.push('/Election') 
+             
+            
          };
 
     render() {

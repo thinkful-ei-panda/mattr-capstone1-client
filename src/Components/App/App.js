@@ -13,6 +13,7 @@ import Logout from '../Login/Logout';
 import Vote from '../Vote/Vote'
 import VoteConfirmation from '../VoteConfirmation';
 import NotFoundPage from '../NotFoundPage';
+import VoteError from '../VoteError'
 
 export default class App extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ export default class App extends Component {
         <Route path='/Login' component={Login} />
         <Route path='/Logout' component={Logout} />
         <PrivateRoute path='/VoteConfirmation' component={VoteConfirmation} />
+        <PrivateRoute path='/VoteError' component={VoteError} />
         <Route component={NotFoundPage} />
         </Switch>
        

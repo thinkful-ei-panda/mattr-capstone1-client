@@ -7,6 +7,8 @@ import Nav from './Nav'
 export default class VoteConfirmation extends Component {
    
     render() {
+        
+
         return (
                 <div>
                      <Nav />  
