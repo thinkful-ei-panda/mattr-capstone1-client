@@ -1,4 +1,4 @@
-This project is by Matthew Rougely using React, PostgreSQL, Express, Javascript, HTML5 and CSS.
+This project is by Matthew Rougely using React, PostgreSQL, Express, Javascript, Moment, Enzyme, HTML5 and CSS.
 
 Vercel Link:
 https://my-poll-data.vercel.app/Home
@@ -11,16 +11,18 @@ Upon logging in users should see the Home screen which displays cards which cont
 about the current state of any given election. The information on the home screen cards should
 include the title of poll, vote count and a button which allows voters to cast a vote.
 
-When the user clicks on any vote button on the home screen they will be asked to login on register
+When the user clicks on any vote button on the home screen they will be asked to login or register
 if they are not currently logged in. At the "You are not logged in screen" they will be given choices.
 One link will go to a registration form and the other link will go to the login form screen.
 
 Upon logging in user will recieve feedback if login or registration is successful. After that they will
 be rerouted back to the vote screen. Users will select an option via radio or drop-down input fields.
 
-Upon submitting vote user should be given feedback of a successful completion and sent back to home screen
-to view the updated vote count. The vote button at this point should be changed to reflect the fact that
-the user has already voted on that issue.
+Upon submitting a vote user should be given feedback of a successful completion and sent back to home screen
+to view the updated vote count. 
+
+____________________________________________________________________
+____________________________________________________________________
 
 Welcome to my Poll Data! You are now entering the beta site.
 Let us begin our journey into shaping the future of Democracy.

@@ -110,6 +110,31 @@ input[type=radio] {
   width: 1em;
 }
 
+button {
+  color: #000055;
+  border-color: #ffffff00;
+  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+  border: none;
+  
+}
+
+button:hover {
+  color: white;
+  background-color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+  border: none;
+}
+
+.logout-button:hover {
+  color: #960000; 
+  background-color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+  border: none;
+}
+
 
 
 @media screen and (min-width: 480px) {
