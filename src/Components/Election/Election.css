@@ -1,8 +1,4 @@
-img{
-    width: 50%;
-}
 
-.Choices {
-    background-image: url(./logo.png);
-    display: flex;
-  }
+p.light{
+    color: #243b55;
+}

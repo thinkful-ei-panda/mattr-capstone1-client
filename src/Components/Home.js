@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
+import './Home.css'
 
 export default class Home extends Component {
     render() {
         return (
-            <div className='landing-page'>
-                 <Nav />  
+            <div><Nav/>
+            <div className='login-box'> 
                 <p> Welcome to My Poll Data! You are now entering the beta site.
                     Let us begin our journey into shaping the future of Democracy.
                     As we know the current process for registering and voting is
@@ -22,8 +23,9 @@ export default class Home extends Component {
 
                 <p> password: My7$ecret </p>
 
-                <Link to='/Login' className='vote-link'> Login </Link>
+                <Link to='/RegistrationForm' className='vote-link'> Register </Link>
 
+            </div>
             </div>
         )
     }

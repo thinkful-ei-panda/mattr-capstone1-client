@@ -4,7 +4,8 @@ import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
 import ElectionHeader from './ElectionHeader'
-import Nav from '../Nav'
+import Nav from '../Nav';
+import './Election.css'
 
 export default class Election extends Component {
 
@@ -74,11 +75,14 @@ export default class Election extends Component {
       const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
       const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
         return (
-            <section className='election-card'>
-              <Nav />  
+        <div className='wrapper'>
+          <Nav />  
+            <div className='login-box'>
+              
               <ElectionHeader />
-        <h3>Total Votes: {totalVotes}</h3>
+            <h3>Total Votes: {totalVotes}</h3>
 
+            <div className='election-cards' >
               <div className='scorecard-entry'>
                   <img src={Democrat} alt="Joe Biden" />
                   <div className="stats">
@@ -94,9 +98,11 @@ export default class Election extends Component {
                   <p className='light'>Votes: {trumpVotes} </p>
                   </div>
               </div>
+              </div>
               
               <Link to='/Vote' className='vote-link'>Vote</Link>
-          </section>
+          </div>
+        </div>
         )
     }
   }

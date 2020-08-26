@@ -3,7 +3,6 @@ import ElectionApiService from "../../Services/election-api-service";
 import history from "../../history";
 import Democrat from "../Images/joe-biden.jpg";
 import Republican from "../Images/donald-trump.jpeg";
-import { Button } from "../Utils/Utils";
 import Nav from "../Nav";
 export default class Vote extends Component {
   state = {
@@ -46,7 +45,7 @@ export default class Vote extends Component {
         <Nav />
         <form className="VoteForm" onSubmit={this.handleVote}>
           <h2> Presidential Election 2020 </h2>
-
+          <div className='election-cards' >
           <div className="scorecard-entry">
             <img src={Democrat} alt="Joe Biden" />
             <div className="stats">
@@ -74,11 +73,11 @@ export default class Vote extends Component {
               <label htmlFor="donald-trump-vote">Donald Trump</label>
             </div>
           </div>
+          </div>
 
-          <Button type="submit" className="vote-link">
-            {" "}
-            Cast Vote{" "}
-          </Button>
+          <button type="submit" className="vote-link">
+            Cast Vote
+          </button>
         </form>
       </div>
     );
