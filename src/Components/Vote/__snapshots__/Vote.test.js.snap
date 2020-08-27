@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vote Component Snapshot test Renders the UI as expected 1`] = `
+<div>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <form
+    className="VoteForm"
+    onSubmit={[Function]}
+  >
+    <h2>
+       Presidential Election 2020 
+    </h2>
+    <div
+      className="election-cards"
+    >
+      <div
+        className="scorecard-entry"
+      >
+        <img
+          alt="Joe Biden"
+          src="joe-biden.jpg"
+        />
+        <div
+          className="stats"
+        >
+          <input
+            id="candidate_id"
+            name="presidential-election-2020"
+            onChange={[Function]}
+            type="radio"
+            value="1"
+          />
+          <label
+            htmlFor="joe-biden-vote"
+          >
+             Joe Biden 
+          </label>
+        </div>
+      </div>
+      <div
+        className="scorecard-entry"
+      >
+        <img
+          alt="Donald Trump"
+          src="donald-trump.jpeg"
+        />
+        <div
+          className="stats"
+        >
+          <input
+            id="candidate_id"
+            name="presidential-election-2020"
+            onChange={[Function]}
+            type="radio"
+            value="2"
+          />
+          <label
+            htmlFor="donald-trump-vote"
+          >
+            Donald Trump
+          </label>
+        </div>
+      </div>
+    </div>
+    <button
+      className="vote-link"
+      type="submit"
+    >
+      Cast Vote
+    </button>
+  </form>
+</div>
+`;

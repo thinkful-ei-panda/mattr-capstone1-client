@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Election Component Snapshot test Renders the UI as expected 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <div
+    className="login-box"
+  >
+    <h2 />
+    <h3>
+       Election Day Deadline: 
+      a few seconds ago
+       
+    </h3>
+    <h3>
+      Total Votes: 
+      0
+    </h3>
+    <div
+      className="election-cards"
+    >
+      <div
+        className="scorecard-entry"
+      >
+        <img
+          alt="Joe Biden"
+          src="joe-biden.jpg"
+        />
+        <div
+          className="stats"
+        >
+          <h4
+            className="light"
+          />
+          <p
+            className="light"
+          >
+            Votes: 
+            0
+             
+          </p>
+        </div>
+      </div>
+      <div
+        className="scorecard-entry"
+      >
+        <img
+          alt="Donald Trump"
+          src="donald-trump.jpeg"
+        />
+        <div
+          className="stats"
+        >
+          <h4
+            className="light"
+          />
+          <p
+            className="light"
+          >
+            Votes: 
+            0
+             
+          </p>
+        </div>
+      </div>
+    </div>
+    <a
+      className="vote-link"
+      href="/Vote"
+      onClick={[Function]}
+    >
+      Vote
+    </a>
+  </div>
+</div>
+`;

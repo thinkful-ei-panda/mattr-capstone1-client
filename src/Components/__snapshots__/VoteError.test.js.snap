@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VoteError Component Snapshot test Renders the UI as expected 1`] = `
+<div>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <h3>
+     
+    You have already previously voted. You can not vote more than once.
+  </h3>
+  <a
+    className="vote-link"
+    href="/Election"
+    onClick={[Function]}
+  >
+     
+    Go Back
+     
+  </a>
+</div>
+`;

@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import RegistrationForm from './RegistrationForm';
-describe(`RegistrationForm Component`, () => {
+import NotLoggedIn from './NotLoggedIn';
+describe(`NotLoggedIn Component`, () => {
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             const div = document.createElement('div');
             ReactDOM.render(
                 <BrowserRouter>
-                    <RegistrationForm />
+                    <NotLoggedIn />
                 </BrowserRouter>
                 , div);
             ReactDOM.unmountComponentAtNode(div);
@@ -21,7 +21,7 @@ describe(`RegistrationForm Component`, () => {
             const tree = renderer
                 .create(
                     <BrowserRouter>
-                        <RegistrationForm />
+                        <NotLoggedIn />
                     </BrowserRouter>
                 )
                 .toJSON()

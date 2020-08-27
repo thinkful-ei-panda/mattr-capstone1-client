@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component Snapshot test Renders the UI as expected 1`] = `
+<div>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <div
+    className="login-box"
+  >
+    <p>
+       Welcome to My Poll Data. You are now entering the beta site. Let us begin our journey into shaping the future of Democracy. As we know the current process for registering and voting is time consuming, cumbersome and in some ways enigmatic for Billions of people around the globe. My Poll Data aims to leverage technology to make Democracy more efficient and therefore more representative. 
+    </p>
+    <p>
+       Use your email to register and login to test the voting system out. Alternatively, you can use this demo account: 
+    </p>
+    <p>
+       login email: mycoolemail@gmail.com 
+    </p>
+    <p>
+       password: My7$ecret 
+    </p>
+    <a
+      className="vote-link"
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       Register 
+    </a>
+  </div>
+</div>
+`;

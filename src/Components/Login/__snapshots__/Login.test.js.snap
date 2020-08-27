@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component Snapshot test Renders the UI as expected 1`] = `
+<div
+  className="login-box"
+>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <h2>
+    Login
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="user-box"
+    >
+      <label>
+        Email *
+      </label>
+      <input
+        id="user_email"
+        name="email"
+        onChange={[Function]}
+        required={true}
+        type="email"
+      />
+    </div>
+    <div
+      className="user-box"
+    >
+      <label>
+        Password *
+      </label>
+      <input
+        id="user_password"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+      />
+    </div>
+    <button
+      className="vote-link"
+      type="submit"
+    >
+      <span />
+      <span />
+      <span />
+      <span />
+      Submit
+    </button>
+  </form>
+</div>
+`;

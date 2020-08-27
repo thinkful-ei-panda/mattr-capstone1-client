@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotLoggedIn Component Snapshot test Renders the UI as expected 1`] = `
+<div>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <div
+    className="Content "
+  >
+    <h2>
+      You are not logged in.
+    </h2>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Log In
+    </a>
+    <p>
+      or
+    </p>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       Register 
+    </a>
+  </div>
+</div>
+`;

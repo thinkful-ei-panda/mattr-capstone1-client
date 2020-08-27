@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationForm Component Snapshot test Renders the UI as expected 1`] = `
+<div>
+  <div
+    className="Nav"
+  >
+    <a
+      href="/Home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/Election"
+      onClick={[Function]}
+    >
+      Elections
+    </a>
+    <a
+      href="/RegistrationForm"
+      onClick={[Function]}
+    >
+       
+      Register
+       
+    </a>
+    <a
+      href="/Login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+  <div
+    className="login-box"
+  >
+    <h2>
+      Register
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="registration__hint"
+      >
+        * required field
+      </div>
+      <div
+        className="user-box"
+      >
+        <label
+          htmlFor="email"
+        >
+          E-mail *
+        </label>
+        <input
+          className="registration__control"
+          id="email"
+          name="email"
+          onChange={[Function]}
+          type="email"
+        />
+      </div>
+      <div
+        className="user-box"
+      >
+        <label
+          htmlFor="password"
+        >
+          Password *
+        </label>
+        <input
+          id="password"
+          name="password"
+          onChange={[Function]}
+          type="password"
+        />
+      </div>
+      <div
+        className="user-box"
+      >
+        <label
+          htmlFor="repeatPassword"
+        >
+          Repeat Password *
+        </label>
+        <input
+          id="repeatPassword"
+          name="repeatPassword"
+          onChange={[Function]}
+          type="password"
+        />
+      </div>
+      <div
+        className="vote-link-button-group"
+      >
+        <button
+          className="vote-link"
+          disabled={false}
+          type="submit"
+        >
+          <span />
+          <span />
+          <span />
+          <span />
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
