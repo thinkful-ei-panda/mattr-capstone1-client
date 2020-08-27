@@ -8,7 +8,7 @@ export default class Home extends Component {
         return (
             <div><Nav/>
             <div className='login-box'> 
-                <p> Welcome to My Poll Data! You are now entering the beta site.
+                <p> Welcome to My Poll Data. You are now entering the beta site.
                     Let us begin our journey into shaping the future of Democracy.
                     As we know the current process for registering and voting is
                     time consuming, cumbersome and in some ways enigmatic for 
