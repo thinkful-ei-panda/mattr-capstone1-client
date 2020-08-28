@@ -100,7 +100,8 @@ export default class Election extends Component {
               </div>
               </div>
               
-              <Link to='/Vote' className='vote-link'>Vote</Link>
+              <Link to='/Vote' className='vote-link'> 
+                Vote</Link>
           </div>
         </div>
         )
