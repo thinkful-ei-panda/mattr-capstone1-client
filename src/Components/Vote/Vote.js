@@ -15,9 +15,13 @@ export default class Vote extends Component {
     },
   };
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  };
+
   updateCandidateChoice(candidate_id) {
     this.setState({ candidate_id: { value: candidate_id, touched: true } });
-  }
+  };
 
   handleVote = (event) => {
     event.preventDefault();
@@ -36,6 +40,7 @@ export default class Vote extends Component {
         history.push("/VoteError");
       });
   };
+
   render() {
     return (
       <div>
@@ -74,14 +79,14 @@ export default class Vote extends Component {
 
           <button type="submit" className="vote-link">
           <span></span>
-                <span></span>
-                <span></span>
-                <span></span> 
+          <span></span>
+          <span></span>
+          <span></span> 
             Cast Vote
           </button>
           
         </form>
       </div>
     );
-  }
-}
+  };
+};
