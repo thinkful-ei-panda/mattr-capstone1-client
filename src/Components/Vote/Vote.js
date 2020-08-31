@@ -45,9 +45,9 @@ export default class Vote extends Component {
       //   history.push("/VoteConfirmation");
       // });
 
-      .catch((res) => {
+      .catch((error) => {
         history.push("/VoteError");
-        return res.json({ message: "User has already voted" });
+        return error.json({ message: "User has already voted" });
       });
   };
 
