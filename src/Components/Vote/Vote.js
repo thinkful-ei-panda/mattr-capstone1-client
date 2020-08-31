@@ -4,24 +4,24 @@ import history from "../../history";
 import Democrat from "../Images/joe-biden.jpg";
 import Republican from "../Images/donald-trump.jpeg";
 import Nav from "../Nav";
-import './Vote.css'
+import "./Vote.css";
 export default class Vote extends Component {
   state = {
     hasError: false,
     election_id: 1,
     candidate_id: {
-      value: 0,
-      touched: true,
+      value: null,
+      touched: false,
     },
   };
 
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  };
+  }
 
   updateCandidateChoice(candidate_id) {
     this.setState({ candidate_id: { value: candidate_id, touched: true } });
-  };
+  }
 
   handleVote = (event) => {
     event.preventDefault();
@@ -33,7 +33,15 @@ export default class Vote extends Component {
       candidate_id: candidate_id,
     })
       .then((res) => {
-        candidate_id.value = "";
+      candidate_id.value = "";
+
+        if(!res.ok){
+          return res.json().then(e => Promise.reject(e))
+        }
+
+        return res.json();
+      })
+      .then((res) => {
         history.push("/VoteConfirmation");
       })
       .catch((error) => {
@@ -78,15 +86,14 @@ export default class Vote extends Component {
           </div>
 
           <button type="submit" className="vote-link">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             Cast Vote
           </button>
-          
         </form>
       </div>
     );
-  };
-};
+  }
+}
