@@ -9,8 +9,7 @@ export default class VoteConfirmation extends Component {
         <Nav />
         <h3> Your vote was successfully counted!</h3>
         <Link to="/Election" className="vote-link">
-          {" "}
-          Go Back{" "}
+          Go Back
         </Link>
       </div>
     );
