@@ -33,21 +33,19 @@ export default class Vote extends Component {
       candidate_id: candidate_id,
     })
       .then((res) => {
-        // candidate_id.value = "";
+      candidate_id.value = "";
 
-        if (!res.ok) {
-          history.push("/VoteConfirmation");
-          // return res.json().then(e => Promise.reject(e))
+        if(!res.ok){
+          return res.json().then(e => Promise.reject(e))
         }
-        return res.json({ message: "User has successfully voted" });
-      })
-      // .catch((error) => {
-      //   history.push("/VoteConfirmation");
-      // });
 
+        return res.json();
+      })
+      .then((res) => {
+        history.push("/VoteConfirmation");
+      })
       .catch((error) => {
         history.push("/VoteError");
-        return error.json({ message: "User has already voted" });
       });
   };
 
