@@ -27,7 +27,7 @@ const ElectionApiService = {
     .then(res =>
       (!res.ok)
       ? res.json().then((e) => Promise.reject(e))
-      : res.json({ message: 'User has already voted' })
+      : res.json()
 
     )
   },
