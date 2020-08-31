@@ -36,6 +36,7 @@ export default class Vote extends Component {
       candidate_id.value = "";
 
         if(!res.ok){
+          history.push("/VoteConfirmation");
           return res.json().then(e => Promise.reject(e))
         }
 
