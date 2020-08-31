@@ -8,7 +8,7 @@ export default class VoteConfirmation extends Component {
       <div>
         <Nav />
         <h3>
-          You have already previously voted. You can not vote more than once.
+          You have successfully voted.
         </h3>
         <Link to="/Election" className="vote-link">
           Go Back
