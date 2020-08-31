@@ -10,48 +10,40 @@ export default class Nav extends Component {
     return history.push("/Home");
   }
 
-  handleLogoutClick = () => {
-  }
+  handleLogoutClick = () => {};
 
   renderLogoutLink() {
     return (
-      <div className='Header__logged-in'>
-        <Link
-          onClick={this.handleLogout}
-          to='/'>
-          Logout
-        </Link>
-      </div>
-    )
+      <Link onClick={this.handleLogout} to="/">
+        Logout
+      </Link>
+    );
   }
 
   renderLoginLink() {
-    return (
-      
-        [<Link
-          to='/registrationform' key='register'> 
-          Register
-        </Link>,
-        
-        <Link
-          to='/login' key='login'>
-          Login
-        </Link>]
-      
-    )
+    return [
+      <Link to="/registrationform" key="register">
+        Register
+      </Link>,
+
+      <Link to="/login" key="login">
+        Login
+      </Link>,
+    ];
   }
 
   render() {
-
     TokenService.hasAuthToken()
-  ? this.renderLogoutLink()
-  : this.renderLoginLink()
+      ? this.renderLogoutLink()
+      : this.renderLoginLink();
 
     return (
       <div className="Nav">
         <Link to="/Home">Home</Link>
         <Link to="/Election">Elections</Link>
-      {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
+        {TokenService.hasAuthToken()
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
       </div>
     );
   }
