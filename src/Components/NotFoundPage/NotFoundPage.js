@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Nav from './Nav'
+import Nav from '../Nav/Nav'
 
 
 export default class NotFoundPage extends Component {

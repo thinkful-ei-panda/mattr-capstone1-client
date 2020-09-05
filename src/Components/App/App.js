@@ -3,15 +3,15 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import PrivateRoute from "../Utils/PrivateRoute";
 import "./App.css";
 import Election from "../Election/Election";
-import Header from "../Header";
-import Home from "../Home";
-import NotLoggedIn from "../NotLoggedIn";
+import Header from "../Header/Header";
+import Home from "../Home/Home";
+import NotLoggedIn from "../NotLoggedIn/NotLoggedIn";
 import RegistrationForm from "../RegistrationForm/RegistrationForm";
 import Login from "../Login/Login";
 import Vote from "../Vote/Vote";
-import VoteConfirmation from "../VoteConfirmation";
-import NotFoundPage from "../NotFoundPage";
-import VoteError from "../VoteError";
+import VoteConfirmation from "../VoteConfirmation/VoteConfirmation";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
+import VoteError from "../VoteError/VoteError";
 
 export default class App extends Component {
   constructor(props) {

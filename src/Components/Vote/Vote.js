@@ -3,7 +3,7 @@ import ElectionApiService from "../../Services/election-api-service";
 import history from "../../history";
 import Democrat from "../Images/joe-biden.jpg";
 import Republican from "../Images/donald-trump.jpeg";
-import Nav from "../Nav";
+import Nav from "../Nav/Nav";
 import "./Vote.css";
 export default class Vote extends Component {
   state = {
@@ -33,11 +33,14 @@ export default class Vote extends Component {
       candidate_id: candidate_id,
     })
       .then((res) => {
-      candidate_id.value = "";
+        candidate_id.value = "";
 
-        if(!res.ok){
-          return res.json().then(e => Promise.reject(e))
+        if (!res.ok) {
+          return res.json().then((e) => Promise.reject(e));
         }
+        history.push("/VoteConfirmation");
+
+        console.log(res);
 
         return res.json();
       })

@@ -3,7 +3,7 @@ import history from "../../history";
 import AuthApiService from "../../Services/auth-api-service";
 import "./RegistrationForm.css";
 import ValidationError from "../ValidationError";
-import Nav from "../Nav";
+import Nav from "../Nav/Nav";
 
 const validator = require("email-validator");
 
@@ -106,42 +106,67 @@ export default class RegistrationForm extends Component {
         <div className="login-box">
           <h2>Register</h2>
           <form onSubmit={this.handleRegistrationSubmit}>
+            <div className="registration__hint">* required field</div>
+            <div className="user-box">
+              <label htmlFor="email">E-mail *</label>
+              <input
+                type="email"
+                className="registration__control"
+                name="email"
+                id="email"
+                onChange={(e) => this.updateEmail(e.target.value)}
+              />
+              {this.state.email.touched && (
+                <ValidationError message={emailError} />
+              )}
+            </div>
 
-          <div className="registration__hint">* required field</div>
-          <div className="user-box">
-            <label htmlFor="email">E-mail *</label>
-            <input type="email" className="registration__control" name="email" id="email" onChange={(e) => this.updateEmail(e.target.value)} />
-            {this.state.email.touched && (<ValidationError message={emailError} />)}
-          </div>
+            <div className="user-box">
+              <label htmlFor="password">Password *</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                onChange={(e) => this.updatePassword(e.target.value)}
+              />
+              {this.state.password.touched && (
+                <ValidationError message={passwordError} />
+              )}
+            </div>
 
-          <div className="user-box">
-            <label htmlFor="password">Password *</label>
-            <input type="password" name="password" id="password" onChange={(e) => this.updatePassword(e.target.value)} />
-            {this.state.password.touched && ( <ValidationError message={passwordError} /> )}
-          </div>
+            <div className="user-box">
+              <label htmlFor="repeatPassword">Repeat Password *</label>
+              <input
+                type="password"
+                name="repeatPassword"
+                id="repeatPassword"
+                onChange={(e) => this.updateRepeatPassword(e.target.value)}
+              />
+              {this.state.repeatPassword.touched && (
+                <ValidationError message={repeatPasswordError} />
+              )}
+            </div>
 
-          <div className="user-box">
-            <label htmlFor="repeatPassword">Repeat Password *</label>
-            <input type="password" name="repeatPassword" id="repeatPassword" onChange={(e) => this.updateRepeatPassword(e.target.value)} />
-            {this.state.repeatPassword.touched && ( <ValidationError message={repeatPasswordError} /> )}
-          </div>
-
-          <div className="vote-link-button-group">
-
-   
-
-            <button type="submit" className="vote-link" disabled={ this.validateEmail() && this.validatePassword() && this.validateRepeatPassword()} > 
+            <div className="vote-link-button-group">
+              <button
+                type="submit"
+                className="vote-link"
+                disabled={
+                  this.validateEmail() &&
+                  this.validatePassword() &&
+                  this.validateRepeatPassword()
+                }
+              >
                 <span></span>
                 <span></span>
                 <span></span>
-                <span></span> 
+                <span></span>
                 Save
-                </button>
-
-          </div>
-        </form>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      </div>
-    )
+    );
   }
 }

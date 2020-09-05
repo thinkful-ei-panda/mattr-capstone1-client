@@ -1,5 +1,6 @@
 import TokenService from "./token-service";
 import config from "../config";
+import history from "../history";
 
 const ElectionApiService = {
   getElections() {

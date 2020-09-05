@@ -5,7 +5,7 @@ import AuthApiService from '../../Services/auth-api-service'
 import '../RegistrationForm/RegistrationForm.css';
 import ValidationError from '../ValidationError';
 import validator from 'email-validator'
-import Nav from '../Nav';
+import Nav from '../Nav/Nav';
 import './Login.css';
 export default class Login extends Component {
 

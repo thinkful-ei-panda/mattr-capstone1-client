@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TokenService from "../Services/token-service";
 
-export const LoginContext = React.createContext({
+const LoginContext = React.createContext({
   email: "",
   loggedIn: false,
   error: null,

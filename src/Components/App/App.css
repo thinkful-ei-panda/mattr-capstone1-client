@@ -336,6 +336,11 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  .not-logged {
+    display: flex;
+    flex-direction: column;
+  }
   
 @media screen and (min-width: 1200px) {
   body {

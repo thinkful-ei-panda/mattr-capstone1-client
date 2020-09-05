@@ -4,7 +4,7 @@ import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
 import ElectionHeader from './ElectionHeader'
-import Nav from '../Nav';
+import Nav from '../Nav/Nav';
 import './Election.css'
 
 export default class Election extends Component {
@@ -12,7 +12,7 @@ export default class Election extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      election1: [],
+      election1: 1,
       candidate1: [],
       candidate2: [],
       votes: [],
@@ -74,6 +74,8 @@ export default class Election extends Component {
       const totalVotes = countTotalVotes(this.state.votes)
       const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
       const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
+
+      console.log(bidenVotes)
         return (
         <div className='wrapper'>
           <Nav />  
