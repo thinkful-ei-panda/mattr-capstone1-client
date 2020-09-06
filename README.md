@@ -1,6 +1,6 @@
 # MY POLL DATA
 
-This project is by Matthew Rougely using React, PostgreSQL, Express, Javascript, Moment, Enzyme, HTML5 and CSS.
+This project is by Matthew R. using React, PostgreSQL, Express, Javascript, Moment, Enzyme, HTML5 and CSS.
 
 Vercel Link:
 https://my-poll-data.vercel.app/Home
@@ -45,6 +45,17 @@ My7$ecret
 
 ____________________________________________________________________
 ____________________________________________________________________
-
+Home:
 ![My Poll Data Screenshot: Home](https://github.com/thinkful-ei-panda/mattr-capstone1-client/blob/master/screenshots/Home.JPG?raw=true)
-Format: ![Screenshot of Home screen](url)
+
+Election:
+![My Poll Data Screenshot: Election](https://github.com/thinkful-ei-panda/mattr-capstone1-client/blob/master/screenshots/Elections.JPG?raw=true)
+
+Login:
+![My Poll Data Screenshot: Login](https://github.com/thinkful-ei-panda/mattr-capstone1-client/blob/master/screenshots/Login.JPG?raw=true)
+
+Register:
+![My Poll Data Screenshot: Register](https://github.com/thinkful-ei-panda/mattr-capstone1-client/blob/master/screenshots/Register.JPG?raw=true)
+
+
+
