@@ -1,4 +1,4 @@
-MY POLL DATA
+# MY POLL DATA
 
 This project is by Matthew Rougely using React, PostgreSQL, Express, Javascript, Moment, Enzyme, HTML5 and CSS.
 
@@ -42,3 +42,9 @@ mycoolemail@gmail.com
 
 password:
 My7$ecret
+
+____________________________________________________________________
+____________________________________________________________________
+
+![My Poll Data Screenshot: Home](https://github.com/thinkful-ei-panda/mattr-capstone1-client/blob/master/screenshots/Home.JPG?raw=true)
+Format: ![Screenshot of Home screen](url)
