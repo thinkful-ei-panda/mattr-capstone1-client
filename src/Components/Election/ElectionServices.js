@@ -3,9 +3,7 @@ import config from "../../config"
 const ElectionServices = {
 
    getElection1Data(){
-    return  fetch(`${config.API_ENDPOINT}/election/1`, {
-      headers:{}
-    })
+    return  fetch(`${config.API_ENDPOINT}/election/1`)
     .then(res => res.json() )
   },
 
