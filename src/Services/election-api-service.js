@@ -3,11 +3,7 @@ import config from "../config";
 
 const ElectionApiService = {
   getElections() {
-    return fetch(`${config.API_ENDPOINT}/election`, {
-      headers: {
-        authorization: `bearer ${TokenService.getAuthToken()}`
-      }
-    })
+    return fetch(`${config.API_ENDPOINT}/election`)
     .then(res =>
       (!res.ok )
       ? res.json().then((e) => Promise.reject(e))

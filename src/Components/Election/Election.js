@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom'
 import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
-import ElectionHeader from './ElectionHeader'
+// import ElectionHeader from './ElectionHeader'
 import Nav from '../Nav/Nav';
 import './Election.css'
+const moment = require('moment')
 
 export default class Election extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      election1: 1,
+      election: {},
       candidate1: [],
       candidate2: [],
       votes: [],
@@ -49,10 +50,21 @@ export default class Election extends Component {
     })
   }
 
+  getElection(){
+    fetch(`${config.API_ENDPOINT}/election`)
+    .then(res => {
+      return res.json()
+    })
+    .then(res => {
+      this.setState({election: res[0]})
+    })
+  }
+
   componentDidMount(){
     this.getCandidate1Data()
     this.getCandidate2Data()
     this.getAllVoteData()
+    this.getElection()
   }
 
     render() {
@@ -63,26 +75,35 @@ export default class Election extends Component {
       function countVotes(arr, num){
         let results = 0;
         for(let i in arr){
-          if(arr[i].candidate_id === num){
+          if(arr[i].candidate_id == num){
             results += 1
           } 
         }
         return results
       }
 
-
       const totalVotes = countTotalVotes(this.state.votes)
       const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
       const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
+     
 
-      console.log(bidenVotes)
+      console.log('bidens votes', bidenVotes)
+      console.log('this is the state of candidate1:', this.state.candidate1.candidate_id)
+      console.log('this is the state of votes:', countVotes(this.state.votes, "1"))
+
+      
+
         return (
+
         <div className='wrapper'>
           <Nav />  
             <div className='login-box'>
-              
-              <ElectionHeader />
+            
+            <header>
+            <h2>{ this.state.election.election_name }</h2>
+            <h3> Election Day Deadline: { moment(this.state.election.date_end).fromNow() } </h3>
             <h3>Total Votes: {totalVotes}</h3>
+            </header>
 
             <div className='election-cards' >
               <div className='scorecard-entry'>

@@ -38,11 +38,10 @@ export default class Vote extends Component {
         if (!res.ok) {
           return res.json().then((e) => Promise.reject(e));
         }
-        history.push("/VoteConfirmation");
 
-        console.log(res);
+        // console.log(res);
 
-        return res.json();
+        // return res.json();
       })
       .then((res) => {
         history.push("/VoteConfirmation");
