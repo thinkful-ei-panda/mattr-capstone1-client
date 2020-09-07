@@ -2,3 +2,22 @@
 p.light{
     color: #243b55;
 }
+
+.election-img{
+    width: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+.scorecard-entry {
+    margin: 20px;
+    padding: 10px;
+    width: 60%;
+    background-color: #03e9f4;
+    box-shadow: 2px 2px 12px 3px rgba(255, 255, 255, 0.76);
+    }
+
+    .election-img{
+        width: 100%;
+    }
+
+}

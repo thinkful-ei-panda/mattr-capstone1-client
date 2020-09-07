@@ -3,18 +3,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
   
 }
 
 body {
   font-family: 'Kanit', sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: linear-gradient(rgb(20, 30, 48), #243b55);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a, h1 {
   color: white;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 0;
   margin-bottom: 0;
   font-family: 'Kanit', sans-serif;
@@ -22,6 +25,8 @@ a, h1 {
 
 h2 {
   color: white;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 h2, h3, h4 {
@@ -57,7 +62,7 @@ a {
 }
 
 img {
-  width: 50%;
+  width: 100%;
 }
 
 div.Nav{
@@ -68,6 +73,8 @@ div.Nav{
 div.scorecard-entry {
 margin-top: 10px;
 display: flex;
+width: 100%;
+
 }
 
 div.Content {
@@ -153,12 +160,10 @@ html {
     justify-content: center;
   }
   
-  .login-box {
+  .login-box, .vote-box {
     margin: 0;
-    padding: 20px;
     flex-direction: row;
     text-align: center;
-    width: 400px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
@@ -168,7 +173,7 @@ html {
   }
   
   .login-box h2 {
-    margin: 0 0 30px;
+    margin-top: 20px;
     padding: 0;
     color: #fff;
     text-align: center;
@@ -376,12 +381,14 @@ html {
     margin-bottom: 5px;
   }
 
-  .login-box {
+  .login-box, .vote-box {
     margin: 0;
     padding: 20px;
     flex-direction: row;
     text-align: center;
-    width: 1000px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);

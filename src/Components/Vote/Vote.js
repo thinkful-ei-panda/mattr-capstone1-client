@@ -53,13 +53,13 @@ export default class Vote extends Component {
 
   render() {
     return (
-      <div>
+      <div className='vote-box'>
         <Nav />
         <form className="VoteForm" onSubmit={this.handleVote}>
           <h2> Presidential Election 2020 </h2>
           <div className="election-cards">
-            <div className="scorecard-entry">
-              <img src={Democrat} alt="Joe Biden" />
+            <div className="vote-input">
+              <img src={Democrat} className='vote-img' alt="Joe Biden" />
               <div className="stats">
                 <input
                   type="radio"
@@ -72,8 +72,8 @@ export default class Vote extends Component {
               </div>
             </div>
 
-            <div className="scorecard-entry">
-              <img src={Republican} alt="Donald Trump" />
+            <div className="vote-input">
+              <img src={Republican} className='vote-img' alt="Donald Trump" />
               <div className="stats">
                 <input
                   type="radio"

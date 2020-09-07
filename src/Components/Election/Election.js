@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
-// import ElectionHeader from './ElectionHeader'
 import Nav from '../Nav/Nav';
 import './Election.css'
 const moment = require('moment')
@@ -68,7 +67,7 @@ export default class Election extends Component {
   }
 
     render() {
-     function countTotalVotes(arr){
+      function countTotalVotes(arr){
             return arr.length
           }
         
@@ -86,13 +85,6 @@ export default class Election extends Component {
       const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
       const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
      
-
-      console.log('bidens votes', bidenVotes)
-      console.log('this is the state of candidate1:', this.state.candidate1.candidate_id)
-      console.log('this is the state of votes:', countVotes(this.state.votes, "1"))
-
-      
-
         return (
 
         <div className='wrapper'>
@@ -107,7 +99,7 @@ export default class Election extends Component {
 
             <div className='election-cards' >
               <div className='scorecard-entry'>
-                  <img src={Democrat} alt="Joe Biden" />
+                  <img src={Democrat} className='election-img' alt="Joe Biden" />
                   <div className="stats">
                   <h4 className='light'>{this.state.candidate1.candidate_name}</h4>
                   <p className='light'>Votes: {bidenVotes} </p>
@@ -115,7 +107,7 @@ export default class Election extends Component {
               </div>
 
               <div className='scorecard-entry'>
-                  <img src={Republican} alt="Donald Trump" />
+                  <img src={Republican} className='election-img' alt="Donald Trump" />
                   <div className="stats">
                   <h4 className='light' >{this.state.candidate2.candidate_name}</h4>
                   <p className='light'>Votes: {trumpVotes} </p>

@@ -2,8 +2,6 @@ import config from "../../config"
 
 const ElectionServices = {
 
-  
-
   getElections() {
     return fetch(`${config.API_ENDPOINT}/election`)
     .then(res =>
