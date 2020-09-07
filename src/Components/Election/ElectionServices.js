@@ -2,14 +2,7 @@ import config from "../../config"
 
 const ElectionServices = {
 
-   getElection1Data(){
-    fetch(`${config.API_ENDPOINT}/election/1`)
-    .then(res => {
-      return res.json() })
-      .then(res => {
-        this.setState({election1: res})
-      })
-  },
+  
 
   getElections() {
     return fetch(`${config.API_ENDPOINT}/election`)
