@@ -1,6 +1,6 @@
 import TokenService from "./token-service";
 import config from "../config";
-
+import history from "../../history";
 const ElectionApiService = {
   
   getElections() {
@@ -25,7 +25,9 @@ const ElectionApiService = {
       (!res.ok)
       ? res.json().then((e) => Promise.reject(e))
       : res.json()
-
+    )
+    .then(
+      history.push("/VoteConfirmation");
     )
   },
 

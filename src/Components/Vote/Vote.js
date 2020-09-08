@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ElectionApiService from "../../Services/election-api-service";
-import history from "../../history";
+// import history from "../../history";
 import Democrat from "../Images/joe-biden.jpg";
 import Republican from "../Images/donald-trump.jpeg";
 import Nav from "../Nav/Nav";
@@ -39,7 +39,7 @@ export default class Vote extends Component {
     })
       .then((res) => {
         candidate_id.value = "";
-        history.push("/VoteConfirmation");
+        // history.push("/VoteConfirmation");
       })
       .catch((res) => {
         console.error('from catch', res.error);
