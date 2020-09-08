@@ -24,11 +24,9 @@ const ElectionApiService = {
     .then(res =>
       (!res.ok)
       ? res.json().then((e) => Promise.reject(e))
-      : res.json()
+      : history.push("/VoteConfirmation")
     )
-    .then(
-      history.push("/VoteConfirmation")
-    )
+    
   },
 
   updateVote(vote, id) {
