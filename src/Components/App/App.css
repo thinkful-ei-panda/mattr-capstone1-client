@@ -9,9 +9,8 @@
 
 body {
   font-family: 'Kanit', sans-serif;
-  background: linear-gradient(rgb(20, 30, 48), #243b55);
+  background: linear-gradient(rgb(20, 30, 48), rgb(36, 59, 85),rgb(20, 30, 48));
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 a, h1 {
@@ -145,20 +144,6 @@ button.Button.vote-link {
 p.red {
   color: white;
 }
-
-/* Form Stuff */
-/* html {
-    height: 100%;
-  } */
-  
-  body {
-    margin:0;
-    padding:0;
-    font-family: 'Kanit', sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-    display: flex;
-    justify-content: center;
-  }
   
   .login-box, .vote-box {
     margin: 0;
@@ -170,7 +155,6 @@ p.red {
     border-radius: 10px;
     justify-content: center;
     width: 100%;
-
   }
   
   .login-box h2 {
