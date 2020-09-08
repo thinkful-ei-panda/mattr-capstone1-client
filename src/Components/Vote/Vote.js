@@ -48,14 +48,14 @@ export default class Vote extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div className="vote-box">
+      <div className="vote-box animate__animated animate__fadeInDownBig">
         <Nav />
-        <form className="vote-form" onSubmit={this.handleVote}>
+        <form className="vote-form " onSubmit={this.handleVote}>
           <h2> Presidential Election 2020 </h2>
-          
+
           <div className="election-cards">
 
-            <div className="vote-input">
+            <div className="vote-input animate__animated animate__fadeInLeftBig">
               <img src={Democrat} className="vote-img" alt="Joe Biden" />
               <div className="stats">
                 <input
@@ -69,7 +69,7 @@ export default class Vote extends Component {
               </div>
             </div>
 
-            <div className="vote-input">
+            <div className="vote-input animate__animated animate__fadeInRightBig">
               <img src={Republican} className="vote-img" alt="Donald Trump" />
               <div className="stats">
                 <input

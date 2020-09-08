@@ -89,7 +89,7 @@ export default class Election extends Component {
 
         <div className='wrapper'>
           <Nav />  
-            <div className='login-box'>
+            <div className='login-box animate__animated animate__fadeInDownBig'>
             
             <header>
             <h2>{ this.state.election.election_name }</h2>
@@ -98,7 +98,7 @@ export default class Election extends Component {
             </header>
 
             <div className='election-cards' >
-              <div className='scorecard-entry'>
+              <div className='scorecard-entry animate__animated animate__fadeInLeftBig'>
                   <img src={Democrat} className='election-img' alt="Joe Biden" />
                   <div className="stats">
                   <h4 className='light'>{this.state.candidate1.candidate_name}</h4>
@@ -106,7 +106,7 @@ export default class Election extends Component {
                   </div>
               </div>
 
-              <div className='scorecard-entry'>
+              <div className='scorecard-entry animate__animated animate__fadeInRightBig'>
                   <img src={Republican} className='election-img' alt="Donald Trump" />
                   <div className="stats">
                   <h4 className='light' >{this.state.candidate2.candidate_name}</h4>

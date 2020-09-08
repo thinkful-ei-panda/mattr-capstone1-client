@@ -6,8 +6,9 @@ import './Home.css'
 export default class Home extends Component {
     render() {
         return (
-            <div><Nav/>
-            <div className='login-box'> 
+            <div>
+                <Nav/>
+            <div className='login-box animate__animated animate__fadeInDownBig'> 
                 <p> Welcome to My Poll Data. You are now entering the beta site.
                     Let us begin our journey into shaping the future of Democracy.
                     As we know the current process for registering and voting is

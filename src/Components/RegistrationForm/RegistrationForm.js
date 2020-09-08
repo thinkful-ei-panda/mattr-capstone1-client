@@ -103,7 +103,7 @@ export default class RegistrationForm extends Component {
     return (
       <div>
         <Nav />
-        <div className="login-box">
+        <div className="login-box animate__animated animate__fadeInDownBig">
           <h2>Register</h2>
           <form onSubmit={this.handleRegistrationSubmit}>
             <div className="registration__hint">* required field</div>

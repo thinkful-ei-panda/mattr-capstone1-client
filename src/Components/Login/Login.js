@@ -75,7 +75,7 @@ export default class Login extends Component {
       <div>
          <Nav />
       
-      <div className="login-box">
+      <div className="login-box animate__animated animate__fadeInDownBig">
         <h2>Login</h2>
         <form onSubmit={this.handleSubmitJwtAuth}>
           <div role="alert">{error && <p className="red">{error}</p>}</div>
