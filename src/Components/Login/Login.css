@@ -23,10 +23,10 @@
                 0 0 100px #03e9f4;
   }
   
-  .login-box a span, button.vote-link span {
+  /* .login-box a span, button.vote-link span {
     position: absolute;
     display: block;
-  }
+  } */
   
   .login-box a span:nth-child(1), button.vote-link span:nth-child(1)  {
     top: 0;
@@ -112,8 +112,10 @@
     border: none;
   }
   
-  label {
-    /* position: relative;
-    padding: 20; */
+
+
+  @media screen and (min-width: 1200px) {
+  
+  
   }
   

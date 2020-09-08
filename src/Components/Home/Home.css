@@ -1,5 +1,9 @@
 p {
     color:white;
+    width: 80%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .login-box {

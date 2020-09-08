@@ -147,9 +147,9 @@ p.red {
 }
 
 /* Form Stuff */
-html {
+/* html {
     height: 100%;
-  }
+  } */
   
   body {
     margin:0;
@@ -169,6 +169,7 @@ html {
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
     justify-content: center;
+    width: 100%;
 
   }
   
@@ -348,11 +349,6 @@ html {
   }
   
 @media screen and (min-width: 1200px) {
-  body {
-    background-repeat: repeat;
-    }
-
-
   img {
     width: 100%;
   }
@@ -360,7 +356,7 @@ html {
   .scorecard-entry {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
 
   }
 
@@ -406,9 +402,6 @@ html {
     
   }
 
-  .election-cards {
-    display: flex;
-    justify-content: center;
-  }
+  
 } 
 

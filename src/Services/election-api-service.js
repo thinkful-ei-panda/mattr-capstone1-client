@@ -2,6 +2,7 @@ import TokenService from "./token-service";
 import config from "../config";
 
 const ElectionApiService = {
+  
   getElections() {
     return fetch(`${config.API_ENDPOINT}/election`)
     .then(res =>

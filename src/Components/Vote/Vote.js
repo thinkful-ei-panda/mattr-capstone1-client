@@ -6,7 +6,10 @@ import Republican from "../Images/donald-trump.jpeg";
 import Nav from "../Nav/Nav";
 import "./Vote.css";
 export default class Vote extends Component {
+
+
   state = {
+    error: null,
     hasError: false,
     election_id: 1,
     candidate_id: {
@@ -34,32 +37,24 @@ export default class Vote extends Component {
     })
       .then((res) => {
         candidate_id.value = "";
-
-        if (!res.ok) {
-          return res.json().then((e) => Promise.reject(e));
-        }
-
-        // console.log(res);
-
-        // return res.json();
-      })
-      .then((res) => {
         history.push("/VoteConfirmation");
       })
-      .catch((error) => {
-        history.push("/VoteError");
+      .catch((res) => {
+        console.error('from catch', res.error);
+        this.setState({ error: res.error });
       });
   };
 
   render() {
+    const { error } = this.state;
     return (
-      <div className='vote-box'>
+      <div className="vote-box">
         <Nav />
         <form className="VoteForm" onSubmit={this.handleVote}>
           <h2> Presidential Election 2020 </h2>
           <div className="election-cards">
             <div className="vote-input">
-              <img src={Democrat} className='vote-img' alt="Joe Biden" />
+              <img src={Democrat} className="vote-img" alt="Joe Biden" />
               <div className="stats">
                 <input
                   type="radio"
@@ -73,7 +68,7 @@ export default class Vote extends Component {
             </div>
 
             <div className="vote-input">
-              <img src={Republican} className='vote-img' alt="Donald Trump" />
+              <img src={Republican} className="vote-img" alt="Donald Trump" />
               <div className="stats">
                 <input
                   type="radio"
@@ -87,6 +82,8 @@ export default class Vote extends Component {
             </div>
           </div>
 
+          <div role="alert">{error && <p className="red">{error}</p>}</div>
+          
           <button type="submit" className="vote-link">
             <span></span>
             <span></span>
@@ -94,6 +91,7 @@ export default class Vote extends Component {
             <span></span>
             Cast Vote
           </button>
+
         </form>
       </div>
     );

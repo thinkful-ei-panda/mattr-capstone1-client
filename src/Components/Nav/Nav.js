@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TokenService from "../../Services/token-service";
 import history from "../../history";
+import './Nav.css'
 
 export default class Nav extends Component {
   handleLogout(event) {
