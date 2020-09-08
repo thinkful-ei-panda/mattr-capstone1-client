@@ -9,7 +9,7 @@ p.light{
 
 @media screen and (min-width: 1200px) {
     .scorecard-entry {
-    box-shadow: 2px 2px 12px 3px rgba(255, 255, 255, 0.76);
+    box-shadow: 2px 2px 12px 3px #03e9f4;
     width: 40%;
     }
 
