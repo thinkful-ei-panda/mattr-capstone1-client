@@ -27,7 +27,7 @@ const ElectionApiService = {
       : res.json()
     )
     .then(
-      history.push("/VoteConfirmation");
+      history.push("/VoteConfirmation")
     )
   },
 
