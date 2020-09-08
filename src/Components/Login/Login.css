@@ -1,4 +1,7 @@
-
+    .login-form {
+      width: 90%;
+    }
+    
   .login-box>form>a, button.vote-link {
     position: relative;
     display: inline-block;
@@ -115,7 +118,9 @@
 
 
   @media screen and (min-width: 1200px) {
-  
+    .login-form {
+      width: 80%;
+    }
   
   }
   

@@ -1,0 +1,19 @@
+.go-back {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.not-found-box {
+  text-align: center;
+}
+
+.not-found {
+  font-size: 1.5em;
+  width: 95%;
+}
+
+@media screen and (min-width: 1200px) {
+  .go-back {
+    font-size: 2em;
+  }
+}

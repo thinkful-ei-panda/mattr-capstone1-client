@@ -101,7 +101,7 @@ export default class RegistrationForm extends Component {
     const repeatPasswordError = this.validateRepeatPassword();
 
     return (
-      <div>
+      <div className='registration-form'>
         <Nav />
         <div className="login-box animate__animated animate__fadeInDownBig">
           <h2>Register</h2>

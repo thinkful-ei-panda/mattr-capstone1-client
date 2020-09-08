@@ -77,7 +77,7 @@ export default class Login extends Component {
     const bell = new UIfx(loginAudio, { volume: 0.4, throttleMs: 100})
 
     return (
-      <div>
+      <div className='login-form'>
          <Nav />
         
       <div className="login-box animate__animated animate__fadeInDownBig">
