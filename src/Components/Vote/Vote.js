@@ -87,7 +87,7 @@ export default class Vote extends Component {
             </div>
           </div>
 
-          <div role="alert">{error && <p className="red">{'Please choose a candidate.'}</p>}</div>
+          <div role="alert">{error && <p className="red">{error}</p>}</div>
           
           <button type="submit" className="vote-link" onClick={bell.play()}>
             <span></span>
