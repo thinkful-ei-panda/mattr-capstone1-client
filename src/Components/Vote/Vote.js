@@ -5,6 +5,8 @@ import Democrat from "../Images/joe-biden.jpg";
 import Republican from "../Images/donald-trump.jpeg";
 import Nav from "../Nav/Nav";
 import "./Vote.css";
+import UIfx from 'uifx'
+import loginAudio from '../../SFX/PremiumBeat_0013_cursor_click_06.wav'
 export default class Vote extends Component {
 
 
@@ -47,6 +49,7 @@ export default class Vote extends Component {
 
   render() {
     const { error } = this.state;
+    const bell = new UIfx(loginAudio, { volume: 0.4, throttleMs: 100});
     return (
       <div className="vote-box animate__animated animate__fadeInDownBig">
         <Nav />
@@ -86,7 +89,7 @@ export default class Vote extends Component {
 
           <div role="alert">{error && <p className="red">{error}</p>}</div>
           
-          <button type="submit" className="vote-link">
+          <button type="submit" className="vote-link" onClick={bell.play()}>
             <span></span>
             <span></span>
             <span></span>

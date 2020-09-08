@@ -4,8 +4,10 @@ import config from '../../config'
 import Democrat from '../Images/joe-biden.jpg'
 import Republican from '../Images/donald-trump.jpeg'
 import Nav from '../Nav/Nav';
-import './Election.css'
-const moment = require('moment')
+import './Election.css';
+
+const moment = require('moment');
+
 
 export default class Election extends Component {
 
@@ -76,15 +78,15 @@ export default class Election extends Component {
         for(let i in arr){
           if(arr[i].candidate_id == num){
             results += 1
-          } 
-        }
+          };
+        };
         return results
-      }
+      };
 
-      const totalVotes = countTotalVotes(this.state.votes)
-      const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id)
-      const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id)
-     
+      const totalVotes = countTotalVotes(this.state.votes);
+      const bidenVotes = countVotes(this.state.votes, this.state.candidate1.candidate_id);
+      const trumpVotes = countVotes(this.state.votes, this.state.candidate2.candidate_id);
+      
         return (
 
         <div className='wrapper'>
@@ -109,14 +111,13 @@ export default class Election extends Component {
               <div className='scorecard-entry animate__animated animate__fadeInRightBig'>
                   <img src={Republican} className='election-img' alt="Donald Trump" />
                   <div className="stats">
-                  <h4 className='light' >{this.state.candidate2.candidate_name}</h4>
-                  <p className='light'>Votes: {trumpVotes} </p>
+                  <h4 className='light' > {this.state.candidate2.candidate_name} </h4>
+                  <p className='light'> Votes: {trumpVotes} </p>
                   </div>
               </div>
               </div>
               
-              <Link to='/Vote' className='vote-link'> 
-                Vote</Link>
+              <Link to='/Vote' className='vote-link'> Vote </Link>
           </div>
         </div>
         )

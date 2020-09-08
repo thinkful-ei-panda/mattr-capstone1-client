@@ -7,6 +7,8 @@ import ValidationError from "../ValidationError";
 import validator from "email-validator";
 import Nav from "../Nav/Nav";
 import "./Login.css";
+import UIfx from 'uifx'
+import loginAudio from '../../SFX/PremiumBeat_0013_cursor_click_01.wav'
 export default class Login extends Component {
   static defaultProps = {
     onLoginSuccess: () => {
@@ -67,14 +69,17 @@ export default class Login extends Component {
       });
   };
 
+   
+
   render() {
     const emailError = this.validateEmail();
     const { error } = this.state;
+    const bell = new UIfx(loginAudio, { volume: 0.4, throttleMs: 100})
 
     return (
       <div>
          <Nav />
-      
+        
       <div className="login-box animate__animated animate__fadeInDownBig">
         <h2>Login</h2>
         <form onSubmit={this.handleSubmitJwtAuth}>
@@ -105,7 +110,7 @@ export default class Login extends Component {
             />
           </div>
 
-          <button type="submit" className="vote-link">
+          <button type="submit" className="vote-link" onClick={bell.play()} >
             <span></span>
             <span></span>
             <span></span>
