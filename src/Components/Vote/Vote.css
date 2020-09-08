@@ -1,9 +1,10 @@
 
-form.VoteForm {
+.vote-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -11,11 +12,12 @@ form.VoteForm {
     width: 100%;
     margin: 10px;
     padding-left: 0px;
-    padding: 5px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    background: #03e9f4;
-    margin-top: 10px;
+    background: white;
+    margin-top: 20px;
+    box-shadow: 2px 2px 12px 3px #03e9f4;
 
 }
 
@@ -26,6 +28,7 @@ form.VoteForm {
     }
     .vote-input {
         width: 100%;
+        margin: 10px;
 
     }
 }

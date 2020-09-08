@@ -5,6 +5,7 @@ p.light{
 
 .election-img{
     width: 50%;
+    box-shadow: none;
 }
 
 @media screen and (min-width: 1200px) {
