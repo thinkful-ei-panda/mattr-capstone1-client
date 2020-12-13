@@ -7,8 +7,8 @@ import ValidationError from "../ValidationError";
 import validator from "email-validator";
 import Nav from "../Nav/Nav";
 import "./Login.css";
-import UIfx from 'uifx'
-import loginAudio from '../../SFX/PremiumBeat_0013_cursor_click_01.wav'
+import UIfx from "uifx";
+import loginAudio from "../../SFX/PremiumBeat_0013_cursor_click_01.wav";
 export default class Login extends Component {
   static defaultProps = {
     onLoginSuccess: () => {
@@ -69,56 +69,53 @@ export default class Login extends Component {
       });
   };
 
-   
-
   render() {
     const emailError = this.validateEmail();
     const { error } = this.state;
-    const bell = new UIfx(loginAudio, { volume: 0.4, throttleMs: 100})
 
     return (
-      <div className='login-form'>
-         <Nav />
-        
-      <div className="login-box animate__animated animate__fadeInDownBig">
-        <h2>Login</h2>
-        <form onSubmit={this.handleSubmitJwtAuth}>
-          <div role="alert">{error && <p className="red">{error}</p>}</div>
+      <div className="login-form">
+        <Nav />
 
-          <div className="user-box">
-            <label>Email *</label>
-            <input
-              required
-              type="email"
-              name="email"
-              id="user_email"
-              onChange={(e) => this.updateEmail(e.target.value)}
-            />
-            {this.state.user_email.touched && (
-              <ValidationError message={emailError} />
-            )}
-          </div>
+        <div className="login-box animate__animated animate__fadeInDownBig">
+          <h2>Login</h2>
+          <form onSubmit={this.handleSubmitJwtAuth}>
+            <div role="alert">{error && <p className="red">{error}</p>}</div>
 
-          <div className="user-box">
-            <label>Password *</label>
-            <input
-              required
-              type="password"
-              name="password"
-              id="user_password"
-              onChange={(e) => this.updatePassword(e.target.value)}
-            />
-          </div>
+            <div className="user-box">
+              <label>Email *</label>
+              <input
+                required
+                type="email"
+                name="email"
+                id="user_email"
+                onChange={(e) => this.updateEmail(e.target.value)}
+              />
+              {this.state.user_email.touched && (
+                <ValidationError message={emailError} />
+              )}
+            </div>
 
-          <button type="submit" className="vote-link" onClick={bell.play()} >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </button>
-        </form>
-      </div>
+            <div className="user-box">
+              <label>Password *</label>
+              <input
+                required
+                type="password"
+                name="password"
+                id="user_password"
+                onChange={(e) => this.updatePassword(e.target.value)}
+              />
+            </div>
+
+            <button type="submit" className="vote-link" >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
