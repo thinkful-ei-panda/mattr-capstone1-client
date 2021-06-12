@@ -17,12 +17,7 @@ export default class Home extends Component {
                     technology to make Democracy more efficient and therefore more 
                     representative. </p>
 
-                <p> Use your email to register and login to test the voting system out. 
-                    Alternatively, you can use this demo account: </p>
-
-                <p> login email: mycoolemail@gmail.com </p> 
-
-                <p> password: My7$ecret </p>
+                <p> Use your email to register and login to test the voting system out.</p>
 
                 <Link to='/RegistrationForm' className='vote-link'> Register </Link>
 
